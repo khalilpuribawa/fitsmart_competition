@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktifitas | FitSmart</title>
+    <link rel="stylesheet" href="../Style/aktifitas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../Images/logo-putih.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars" style="font-size: 23px;"></i>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html">
+                <button type="button" class="btn-masuk">Masuk</button>
+            </a>
+            <a href="register.html">
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+            <li class="button2"><a href="#">
+                <button type="button" class="btn-masuk">Masuk</button>
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a></li>
+        </ul>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const toggleBtnIcon = document.querySelector('.toggle-btn i'); // Ikon di dalamnya
+            const dropDownMenu = document.querySelector('.dropdown-menu');
+
+            toggleBtn.addEventListener("click", function () {
+                // Toggle class "open" untuk menampilkan atau menyembunyikan dropdown
+                dropDownMenu.classList.toggle('open');
+
+                // Deklarasikan isOpen dalam fungsi ini agar tidak undefined
+                let isOpen = dropDownMenu.classList.contains('open');
+
+                // Ganti ikon FontAwesome
+                toggleBtnIcon.className = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars';
+            });
+        </script>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="tag-text">MENJAGA KESEHATAN UNTUK HIDUP LEBIH BAIK</h2>
+            <p style="position: absolute; font-size: 55px; margin-top: -5rem;" class="emote">🚴🏻‍♂️</p>
+            <p style="position: absolute; font-size: 55px; margin-top: 9rem; margin-left: 45rem;" class="emote">🏋🏻‍♂️</p>
+            <h1 class="judul-text1">Sehat Dengan Aktifitas</h1>
+            <p class="deskripsi">Rutin berolahraga menjaga tubuh tetap bugar dan sehat, meningkatkan daya tahan serta kebugaran fisik. Temukan berbagai aktivitas yang cocok untuk gaya hidup sehatmu!</p>
+            
+            <div class="buttons">
+                <a href="#aktifitas">
+                <button class="primary-btn">Pelajari Lebih →</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+        </div>
+    </section>
+
+    <button class="floating-button" onclick="toggleAI()">AI</button>
+    <div class="chatBot" id="aiBox">
+        <header>AI FitSmart</header>
+        <ul class="chatbox">
+        </ul>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder=""></textarea>
+            <button class="button-ai" id="sendBTN">Kirim</button>
+        </div>
+    </div>
+
+    <section class="aktifitas" id="aktifitas">
+        <div class="blog-aktifitas1">
+            <div class="gambar-aktifitas1"></div>
+            <div class="text-aktifitas">
+                <h2>OLAHRAGA SEHAT</h2>
+                <h1>Bola Basket</h1>
+                <div class="tags">
+                    <div class="tag">Membakar Kalori</div>
+                    <div class="tag">Meningkatkan Kelincahan Tangan</div>
+                </div>
+                <div class="paragraf">
+                    <p>Bermain basket adalah olahraga yang menyenangkan dan memiliki banyak manfaat bagi kesehatan fisik, mental, dan sosial. dan baik untuk penyakit apa saja ya? :</p>
+                    <p style="font-family: 'Poppins-Medium'; margin-top: 15px;">1. Penyakit Jantung dan Pembuluh Darah <br>
+                    2. Diabetes Tipe 2 <br>
+                    3. Obesitas</p>
+                </div>
+                <button class="primary-btn-aktifitas" onclick="openPopup()">Pelajari Lebih →</button>
+            </div>
+            <div id="popup" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <div class="popup_highlight1"></div>
+                    <h2>Bola Basket</h2>
+                    <p>Basket adalah olahraga tim yang dimainkan oleh dua regu dengan masing-masing lima pemain. Tujuan utama dari permainan ini adalah mencetak poin dengan memasukkan bola ke dalam ring lawan. Basket dikenal sebagai olahraga yang cepat dan dinamis karena melibatkan kombinasi keterampilan seperti dribbling, passing, shooting, dan bertahan. <br> <br>
+
+                        Olahraga ini tidak hanya menyenangkan tetapi juga memberikan banyak manfaat bagi kesehatan fisik dan mental. Bermain basket secara rutin dapat membantu meningkatkan daya tahan tubuh, memperkuat otot, serta melatih koordinasi dan keseimbangan. Selain itu, basket juga memiliki peran dalam meningkatkan kemampuan sosial dan kerja sama tim, karena membutuhkan komunikasi yang baik antar pemain. <br> <br>
+
+                        Manfaat Bermain Basket <br> <br>
+                        Meningkatkan Kesehatan Jantung – Gerakan aktif dalam basket membantu meningkatkan sirkulasi darah dan menjaga kesehatan jantung. <br> <br>
+                        Melatih Keseimbangan dan Koordinasi – Dribbling dan shooting memerlukan kontrol tubuh yang baik, sehingga meningkatkan keseimbangan dan koordinasi motorik. <br> <br>
+                        Membantu Menurunkan Berat Badan – Aktivitas yang intens dalam permainan basket membakar banyak kalori dan membantu menjaga berat badan ideal. <br> <br>
+                        Basket juga merupakan olahraga yang dapat dimainkan di berbagai tingkat keahlian, dari pemula hingga profesional. Selain itu, banyak turnamen dan kompetisi yang dapat diikuti untuk mengasah kemampuan serta mempererat persahabatan di antara para pemain.
+                        </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="blog-aktifitas2">
+            <div class="text-aktifitas">
+                <h2>OLAHRAGA SEHAT</h2>
+                <h1>Sepak Bola</h1>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                    <div class="tag">Turunkan Berat Badan</div>
+                </div>
+                <div class="paragraf">
+                    <p>Olahraga ini dapat meningkatkan daya tahan tubuh, melatih koordinasi, serta memperkuat otot dan jantung. Dan baik untuk penyakit apa saja ya? :</p>
+                    <p style="font-family: 'Poppins-Medium'; margin-top: 15px;">1. Osteoarthritis <br>
+                    2. Asma <br>
+                    3. Obesitas</p>
+                </div>
+                <button class="primary-btn-aktifitas" onclick="openPopup2()">Pelajari Lebih →</button>
+            </div>
+            <div id="popup2" class="popup2" style="display: none;">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup2()">&times;</span>
+                    <div class="popup_highlight2"></div>
+                    <h2>Sepak Bola</h2>
+                    <p>Sepak bola adalah olahraga tim yang dimainkan oleh dua regu, masing-masing terdiri dari sebelas pemain. Tujuan utama permainan ini adalah mencetak gol dengan memasukkan bola ke gawang lawan menggunakan kaki atau bagian tubuh lain kecuali tangan. Sepak bola dikenal sebagai olahraga paling populer di dunia karena dimainkan oleh berbagai kalangan dan memiliki basis penggemar yang sangat besar. <br> <br>
+
+                        Permainan berlangsung selama 90 menit yang dibagi menjadi dua babak, masing-masing 45 menit, dengan istirahat 15 menit di antaranya. Pemain hanya diperbolehkan menggunakan kaki, kepala, atau dada untuk mengontrol bola, kecuali kiper yang boleh menggunakan tangan di area kotak penalti. <br> <br>
+                        Manfaat Bermain Sepak Bola <br> <br>
+                        Meningkatkan Kesehatan Jantung – Aktivitas fisik yang intens, seperti berlari dan menggiring bola, membantu meningkatkan daya tahan jantung dan paru-paru. <br> <br>
+                        Melatih Kecepatan dan Kelincahan – Permainan yang dinamis memerlukan pergerakan cepat, refleks yang baik, serta koordinasi tubuh yang tinggi. <br> <br>
+                        Mengembangkan Kerja Sama Tim – Sepak bola adalah olahraga tim yang membutuhkan komunikasi dan strategi antar pemain untuk meraih kemenangan. <br> <br>
+                        Meningkatkan Kekuatan Otot dan Ketahanan Fisik – Berlari, menendang, dan bertahan dalam pertandingan membantu memperkuat otot kaki serta meningkatkan daya tahan tubuh. <br> <br>
+
+                        Sepak bola juga memiliki nilai sosial yang tinggi karena bisa dimainkan di berbagai tempat, mulai dari lapangan profesional hingga jalanan, serta dapat mempererat hubungan antar pemain. Dengan banyaknya kompetisi di berbagai tingkatan, sepak bola menjadi salah satu olahraga yang terus berkembang dan digemari oleh masyarakat di seluruh dunia.
+                        </p>
+                </div>
+            </div>
+            <div class="gambar-aktifitas2"></div>
+        </div>
+        <div class="blog-aktifitas1">
+            <div class="gambar-aktifitas3"></div>
+            <div class="text-aktifitas">
+                <h2>OLAHRAGA SEHAT</h2>
+                <h1>Bulu Tangkis</h1>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                    <div class="tag">Turunkan Berat Badan</div>
+                </div>
+                <div class="paragraf">
+                    <p>Bulu Tangkis dapat meningkatkan kelincahan, memperkuat otot tubuh, serta melatih daya tahan kardiovaskular. Dan baik untuk penyakit apa saja ya? :</p>
+                    <p style="font-family: 'Poppins-Medium'; margin-top: 15px;">1. Osteoporosis <br>
+                    2. Sindrom Metabolik  <br>
+                    3. Insomnia</p>
+                </div>
+                <button class="primary-btn-aktifitas" onclick="openPopup3()">Pelajari Lebih →</button>
+            </div>
+            <div id="popup3" class="popup3" style="display: none;">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup3()">&times;</span>
+                    <div class="popup_highlight3"></div>
+                    <h2>Bulu Tangkis</h2>
+                    <p>Bulu tangkis adalah olahraga raket yang dimainkan oleh dua pemain (tunggal) atau dua pasangan (ganda) dengan tujuan utama memukul shuttlecock melewati net ke area lawan. Permainan ini menuntut kecepatan, ketangkasan, serta strategi yang baik untuk mengalahkan lawan dengan mengarahkan shuttlecock ke tempat yang sulit dijangkau. <br> <br>
+
+                        Permainan bulu tangkis dimainkan di lapangan berbentuk persegi panjang dengan net di tengahnya. Setiap reli dimulai dengan servis, dan pemain harus berusaha mencetak poin dengan memukul shuttlecock agar jatuh di area lawan atau membuat lawan melakukan kesalahan. Setiap pertandingan biasanya dimainkan dalam format best of three (dua dari tiga set), di mana setiap set berlangsung hingga 21 poin. <br> <br>
+                        Manfaat Bermain Bulu Tangkis <br> <br>
+                        Meningkatkan Ketangkasan dan Refleks – Permainan ini membutuhkan reaksi cepat dan pergerakan lincah untuk mengembalikan pukulan lawan. <br> <br>
+                        Melatih Daya Tahan dan Kesehatan Jantung – Aktivitas berlari, melompat, dan melakukan pukulan intens membantu meningkatkan daya tahan tubuh serta kesehatan kardiovaskular. <br> <br>
+                        Membantu Menurunkan Berat Badan – Bermain bulu tangkis secara rutin dapat membakar kalori dan membantu menjaga berat badan ideal. <br> <br>
+                        Mengembangkan Koordinasi dan Keseimbangan – Mengontrol raket dan melakukan pukulan akurat melatih koordinasi tangan dan mata serta keseimbangan tubuh. <br> <br>
+                        Meningkatkan Konsentrasi dan Strategi Berpikir – Setiap pukulan membutuhkan perhitungan yang matang untuk mengalahkan lawan dengan teknik yang tepat. <br> <br>
+
+
+                        Bulu tangkis merupakan olahraga yang bisa dimainkan oleh berbagai kalangan, baik secara rekreasi maupun kompetitif. Dengan banyaknya turnamen tingkat nasional hingga internasional, seperti All England dan Olimpiade, bulu tangkis terus berkembang menjadi salah satu olahraga yang paling digemari di dunia, terutama di negara-negara Asia seperti Indonesia.
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-aktifitas2">
+            <div class="text-aktifitas">
+                <h2>OLAHRAGA SEHAT</h2>
+                <h1>Workout</h1>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                    <div class="tag">Turunkan Berat Badan</div>
+                </div>
+                <div class="paragraf">
+                    <p>Workout adalah aktivitas fisik yang bermanfaat untuk meningkatkan kebugaran tubuh, membangun otot, serta menjaga kesehatan jantung dan metabolisme. Lalu baik untuk penyakit apa saja ya? :</p>
+                    <p style="font-family: 'Poppins-Medium'; margin-top: 15px;">1. Penyakit Jantung dan Pembuluh Darah <br>
+                    2. Diabetes Tipe 2 <br>
+                    3. Obesitas</p>
+                </div>
+                <button class="primary-btn-aktifitas" onclick="openPopup4()">Pelajari Lebih →</button>
+            </div>
+            <div class="gambar-aktifitas4"></div>
+            <div id="popup4" class="popup4" style="display: none;">
+                <div class="popup-content4">
+                    <span class="close-btn" onclick="closePopup4()">&times;</span>
+                    <div class="popup_highlight4"></div>
+                    <h2>Workout</h2>
+                    <p>Workout adalah serangkaian latihan fisik yang dilakukan untuk meningkatkan kebugaran tubuh, memperkuat otot, serta menjaga kesehatan secara keseluruhan. Workout dapat dilakukan di gym, di rumah, atau di tempat terbuka dengan berbagai metode latihan, seperti latihan beban, kardio, dan fleksibilitas. <br> <br>
+
+                        Jenis-jenis workout <br> <br>
+                        Latihan Kardiovaskular (Cardio) – Contohnya lari, bersepeda, lompat tali, dan aerobik. Latihan ini bermanfaat untuk meningkatkan daya tahan jantung dan paru-paru. <br><br>
+                        Latihan Kekuatan (Strength Training) – Melibatkan angkat beban atau latihan menggunakan berat tubuh seperti push-up dan squats untuk memperkuat otot. <br><br>
+                        Latihan Fleksibilitas (Flexibility Training) – Seperti yoga dan stretching yang membantu meningkatkan kelenturan serta mengurangi risiko cedera. <br><br>
+                        Latihan Fungsional (Functional Training) – Bertujuan untuk meningkatkan koordinasi dan keseimbangan tubuh, seperti plank dan burpees. <br><br>
+
+                        Manfaat workout <br> <br>
+                        Meningkatkan Kesehatan Jantung – Latihan rutin dapat memperkuat jantung dan melancarkan peredaran darah. <br><br>
+                        Membantu Menurunkan Berat Badan – Membakar kalori dan meningkatkan metabolisme untuk menjaga berat badan ideal. <br><br>
+                        Meningkatkan Kekuatan dan Daya Tahan Tubuh – Melatih otot dan tulang agar lebih kuat serta meningkatkan ketahanan fisik. <br><br>
+                        Mengurangi Stres dan Meningkatkan Mood – Workout dapat merangsang produksi hormon endorfin yang membuat tubuh lebih rileks dan bahagia. <br><br>
+                        Meningkatkan Kualitas Tidur – Aktivitas fisik yang cukup membantu tubuh lebih mudah beristirahat dengan tidur yang nyenyak. <br><br>
+
+
+                        Workout adalah olahraga yang fleksibel dan dapat disesuaikan dengan kebutuhan serta kemampuan individu. Dengan melakukan workout secara rutin, tubuh akan menjadi lebih sehat, bugar, dan berenergi dalam menjalani aktivitas sehari-hari.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="qna">
+        <div class="container-5">
+            <div class="title">Frequently Asked Questions</div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-1">
+                <label for="acc-1">
+                    <h3>Sebutkan Beberapa Aktifitas Olahraga</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Lari (jogging/maraton), Bersepeda, Renang, Yoga, Workout/Fitness, Senam (aerobik/zumba), Panahan, Mendaki gunung, Sepak bola, Basket, Voli, Bulu tangkis, Parkout, Futsal, Tenis meja, Selancar (surfing), Panjat tebing, Ski dan Snowboarding dan lainnya</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-2">
+                <label for="acc-2">
+                    <h3>Apa Manfaat Kita Berolahraga?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Berolahraga memiliki banyak manfaat bagi kesehatan fisik, mental, dan sosial. Secara fisik, olahraga membantu meningkatkan kesehatan jantung, memperkuat otot dan tulang, serta menjaga berat badan ideal. Aktivitas fisik yang teratur juga dapat meningkatkan daya tahan tubuh dan fleksibilitas, sehingga tubuh lebih bugar dan terhindar dari berbagai penyakit.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-3">
+                <label for="acc-3">
+                    <h3>Apa Dampak Ketika Kita Tidak Pernah Beraktifitas?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Tidak beraktivitas fisik secara teratur dapat memberikan dampak negatif bagi kesehatan fisik, mental, dan sosial. Dari segi fisik, kurangnya aktivitas dapat menyebabkan penurunan kebugaran tubuh, melemahnya otot dan tulang, serta meningkatkan risiko obesitas. Selain itu, gaya hidup yang kurang aktif dapat meningkatkan kemungkinan terkena berbagai penyakit kronis seperti penyakit jantung, diabetes, dan tekanan darah tinggi.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-4">
+                <label for="acc-4">
+                    <h3>Apa Olarhaga Yang Dapat Dilakukan di Rumah?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Senam Aerobik, Lompat Tali, Yoga, Push-Up, Squat, Plank, Burpee, Wall Sit, Stretching, Kardio dengan Musik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img class="background-olahraga" src="../Images/background-olahraga.svg" alt="">
+
+    <h1 class="last-title">Mulai <span style="color: #30B0C7; font-family: 'Poppins-Medium';">Hidup Sehat</span> Dari Sekarang Demi Masa Depan</h1>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-top">
+                <div class="logo-footer"></div>
+                <p class="desk-footer">Menjaga Kesehatan Indonesia</p>
+
+                <div class="button-container">
+                    <a href="login.html">
+                    <button type="button" class="button">Masuk</button>
+                    </a>
+                    <a href="register.html">
+                    <button type="button" class="button">Daftar</button>
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© FitSmart 2025. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="konsumsi.html">Konsumsi</a>
+                    <a href="penyakit.html">Penyakit</a>
+                    <a href="aktifitas.html">Aktifitas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="../script.js"></script>
+</body>
+</html>

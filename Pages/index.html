@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSmart - Edukasi Kesehatan</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../Images/logo-putih.svg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars" style="font-size: 23px;"></i>
+        </div>
+        <div class="auth-buttonbuttons">
+            <a href="login.html">
+                <button type="button" class="btn-masuk">Masuk</button>
+            </a>
+            <a href="register.html">
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+            <li class="button2"><a href="#">
+                <button type="button" class="btn-masuk">Masuk</button>
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a></li>
+        </ul>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const toggleBtnIcon = document.querySelector('.toggle-btn i'); // Ikon di dalamnya
+            const dropDownMenu = document.querySelector('.dropdown-menu');
+
+            toggleBtn.addEventListener("click", function () {
+                // Toggle class "open" untuk menampilkan atau menyembunyikan dropdown
+                dropDownMenu.classList.toggle('open');
+
+                // Deklarasikan isOpen dalam fungsi ini agar tidak undefined
+                let isOpen = dropDownMenu.classList.contains('open');
+
+                // Ganti ikon FontAwesome
+                toggleBtnIcon.className = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars';
+            });
+        </script>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="judul-text1">Jalan Cerdas Anda Menuju <span>Kesehatan</span></h1>
+            <p class="deskripsi">Temukan solusi kesehatan terbaik dengan dukungan dokter profesional dan layanan medis berkualitas. Dapatkan informasi medis terpercaya, akses ke dokter spesialis terbaik, serta kemudahan dalam melakukan reservasi.</p>
+            
+            <div class="buttons">
+                <a href="#logo">
+                <button class="primary-btn">Pelajari Lebih →</button>
+                </a>
+                <a href="login.html">
+                <button class="secondary-btn">Mulai Sekarang! </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="../Images/hero-right.svg" alt="Dokter">
+        </div>
+    </section>
+
+    <button class="floating-button" onclick="toggleAI()">AI</button>
+    <div class="chatBot" id="aiBox">
+        <header>AI FitSmart</header>
+        <ul class="chatbox">
+        </ul>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder=""></textarea>
+            <button class="button-ai" id="sendBTN">Kirim</button>
+        </div>
+    </div>
+
+    <section class="brand-logos">
+        <div class="logo-wrapper">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pfizer_%282021%29.svg/640px-Pfizer_%282021%29.svg.png" alt="Figma">
+                <img style="width: 130px; height: 35px; opacity: 0.3;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sanofi-2022.svg/640px-Sanofi-2022.svg.png" alt="Netflix">
+                <img style="width: 140px; height: 40px; opacity: 1;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/World_Health_Organization_Logo.svg/640px-World_Health_Organization_Logo.svg.png" alt="WHO">
+                <img style="width: 170px; height: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Medtronic_logo.svg/640px-Medtronic_logo.svg.png" alt="Medtronic">
+                <img style="width: 110px; height: 35px; opacity: 0.7;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" alt="Google">
+                <img style="width: 140px; height: 35px; opacity: 0.6;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Zeneca_logo.svg/640px-Zeneca_logo.svg.png" alt="Zeneca">
+                <img style="width: 170px; height: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Medtronic_logo.svg/640px-Medtronic_logo.svg.png" alt="Medtronic">
+                <img style="width: 200px; height: 35px; opacity: 0.7;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/640px-Novartis-Logo.svg.png" alt="Novartis">
+    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pfizer_%282021%29.svg/640px-Pfizer_%282021%29.svg.png" alt="Figma">
+                <img style="width: 130px; height: 35px; opacity: 0.3;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sanofi-2022.svg/640px-Sanofi-2022.svg.png" alt="Netflix">
+                <img style="width: 140px; height: 40px; opacity: 1;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/World_Health_Organization_Logo.svg/640px-World_Health_Organization_Logo.svg.png" alt="WHO">
+                <img style="width: 170px; height: 30px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Medtronic_logo.svg/640px-Medtronic_logo.svg.png" alt="Medtronic">
+                <img style="width: 110px; height: 35px; opacity: 0.7;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png" alt="Google">
+                <img style="width: 140px; height: 35px; opacity: 0.6;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Zeneca_logo.svg/640px-Zeneca_logo.svg.png" alt="Zeneca">
+                <img style="width: 200px; height: 35px; opacity: 0.7;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/640px-Novartis-Logo.svg.png" alt="Novartis">
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="makanan">
+        <div class="makanan-text">
+            <div class="text-makanan-kanan">
+                <h1><span style="color: #30B0C7;">→</span>  Makanan Kesehatan</h1>
+            </div>
+            <div class="text-makanan-kiri">
+                <p>Beberapa kategori makanan yang dapat membantu menjaga kesehatan tubuh anda.</p>
+            </div>
+        </div>
+       <div class="container">
+        <div class="image-container">
+            <img src="../Images/makanan.svg" alt="hero">
+        </div>
+        <div class="text-container">
+            <div class="makanan-title1">
+                <h2>MAKANAN KESEHATAN</h2>
+                <h1>Buah-Buahan & <br>Sayur-Sayuran</h1>
+            </div>
+            <div class="makanan-title2">
+                <p>
+                    ✅ Membantu mencegah penyakit jantung, obesitas, dan stroke.<br>
+                    ✅ Mencegah dan mengurangi stres berlebih. <br>
+                    ✅ Membersihkan racun dalam tubuh (Detoksifikasi)
+                </p>
+                <button class="primary-btn-makanan" onclick="openPopup()">Pelajari Lebih →</button>
+            </div>
+        </div>
+        <div id="popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <div class="popup_highlight1"></div>
+                <h2>Buah-Buahan & Sayur-Sayuran</h2>
+                <p>Buah-buahan dan sayur-sayuran merupakan sumber makanan alami yang kaya akan nutrisi penting bagi kesehatan tubuh. Keduanya mengandung berbagai vitamin, mineral, serat, dan antioksidan yang berperan dalam menjaga keseimbangan gizi serta mencegah berbagai penyakit. <br> <br>
+
+                    Manfaat Buah-buahan dan Sayur-sayuran <br> <br>
+                    Meningkatkan Sistem Imun – Kandungan vitamin C, A, dan antioksidan dalam buah dan sayur membantu meningkatkan daya tahan tubuh dan melawan infeksi. <br>
+                    Menjaga Kesehatan Pencernaan – Serat yang tinggi dalam sayur dan buah membantu melancarkan pencernaan serta mencegah sembelit. <br>
+                    Menurunkan Risiko Penyakit Kronis – Konsumsi buah dan sayur secara rutin dapat mengurangi risiko penyakit jantung, tekanan darah tinggi, serta beberapa jenis kanker. <br>
+                    Mendukung Berat Badan Sehat – Rendah kalori dan kaya serat membuat buah dan sayur menjadi pilihan makanan yang baik untuk menjaga berat badan ideal. <br>
+                    Jenis-jenis Buah dan Sayur serta Kandungan Gizinya <br> <br>
+                    Buah-buahan <br> <br>
+                    Buah Beri (Stroberi, Blueberry, Raspberry) – Kaya antioksidan dan vitamin C untuk menjaga kesehatan jantung. <br>
+                    Pisang – Mengandung kalium tinggi yang baik untuk kesehatan otot dan tekanan darah. <br>
+                    Jeruk & Lemon – Sumber vitamin C yang meningkatkan sistem kekebalan tubuh. <br>
+                    Apel & Pir – Kaya serat untuk pencernaan yang sehat. <br>
+                    Sayur-sayuran <br> <br>
+                    Bayam & Kale – Mengandung zat besi dan antioksidan untuk kesehatan darah dan kulit. <br>
+                    Wortel – Kaya beta-karoten yang bermanfaat bagi kesehatan mata. <br>
+                    Brokoli & Kubis – Mengandung serat tinggi dan zat anti-kanker. <br>
+                    Tomat – Sumber likopen yang baik untuk kesehatan jantung. <br>
+                    Mengonsumsi buah dan sayur setiap hari sangat dianjurkan untuk menjaga kesehatan tubuh secara menyeluruh. Kombinasi warna dan jenis yang beragam dalam menu harian dapat memberikan manfaat yang maksimal bagi tubuh. <br>
+                    </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="penyakit">
+            <img class="bakcgound-penyakit" src="../Images/background-penyakit.svg" alt="">
+            <div class="penyakit1">
+                <div class="card1 card_highlight1"></div>
+                <div class="card1">
+                    <h1>Diabetes Mellitus: <br> Penyakit Metabolik</h1>
+                    <p style="margin-bottom: 15px;">Diabetes Mellitus adalah gangguan metabolik kronis yang ditandai dengan kadar gula darah yang tinggi akibat gangguan produksi atau penggunaan insulin dalam tubuh.</p>
+                    <p class="second-p-penyakit">Diabetes terbagi menjadi beberapa jenis, termasuk diabetes tipe 1, tipe 2, dan diabetes gestasional. Faktor risiko utama meliputi pola makan tidak sehat.</p>
+                    <button class="primary-btn-penyakit" onclick="openPopup2()">Pelajari Lebih →</button>
+                    <a href="penyakit.html">
+                    <button class="secondary-btn-penyakit">Penyakit Lainnya </button>
+                    </a>
+                </div>
+                <div id="popup2" class="popup2" style="display: none;">
+                    <div class="popup-content2">
+                        <span class="close-btn" onclick="closePopup2()">&times;</span>
+                        <div class="popup_highlight2"></div>
+                        <h2>Diabetes Mellitus: <br> Penyakit Metabolik</h2>
+                        <p>Buah-buahan dan sayur-sayuran merupakan sumber makanan alami yang kaya akan nutrisi penting bagi kesehatan tubuh. Keduanya mengandung berbagai vitamin, mineral, serat, dan antioksidan yang berperan dalam menjaga keseimbangan gizi serta mencegah berbagai penyakit. <br> <br>
+        
+                            Manfaat Buah-buahan dan Sayur-sayuran <br> <br>
+                            Meningkatkan Sistem Imun – Kandungan vitamin C, A, dan antioksidan dalam buah dan sayur membantu meningkatkan daya tahan tubuh dan melawan infeksi. <br>
+                            Menjaga Kesehatan Pencernaan – Serat yang tinggi dalam sayur dan buah membantu melancarkan pencernaan serta mencegah sembelit. <br>
+                            Menurunkan Risiko Penyakit Kronis – Konsumsi buah dan sayur secara rutin dapat mengurangi risiko penyakit jantung, tekanan darah tinggi, serta beberapa jenis kanker. <br>
+                            Mendukung Berat Badan Sehat – Rendah kalori dan kaya serat membuat buah dan sayur menjadi pilihan makanan yang baik untuk menjaga berat badan ideal. <br>
+                            Jenis-jenis Buah dan Sayur serta Kandungan Gizinya <br> <br>
+                            Buah-buahan <br> <br>
+                            Buah Beri (Stroberi, Blueberry, Raspberry) – Kaya antioksidan dan vitamin C untuk menjaga kesehatan jantung. <br>
+                            Pisang – Mengandung kalium tinggi yang baik untuk kesehatan otot dan tekanan darah. <br>
+                            Jeruk & Lemon – Sumber vitamin C yang meningkatkan sistem kekebalan tubuh. <br>
+                            Apel & Pir – Kaya serat untuk pencernaan yang sehat. <br>
+                            Sayur-sayuran <br> <br>
+                            Bayam & Kale – Mengandung zat besi dan antioksidan untuk kesehatan darah dan kulit. <br>
+                            Wortel – Kaya beta-karoten yang bermanfaat bagi kesehatan mata. <br>
+                            Brokoli & Kubis – Mengandung serat tinggi dan zat anti-kanker. <br>
+                            Tomat – Sumber likopen yang baik untuk kesehatan jantung. <br>
+                            Mengonsumsi buah dan sayur setiap hari sangat dianjurkan untuk menjaga kesehatan tubuh secara menyeluruh. Kombinasi warna dan jenis yang beragam dalam menu harian dapat memberikan manfaat yang maksimal bagi tubuh. <br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="penyakit2">
+                <div class="card2">
+                    <h1>Kolesterol Tinggi: <br> Risiko PKV</h1>
+                    <p style="margin-bottom: 15px;">Kolesterol tinggi terjadi ketika kadar lemak dalam darah melebihi batas normal, yang dapat meningkatkan risiko penyakit kardiovaskular (PKV).</p>
+                    <p class="second-p-penyakit">Faktor risiko utama meliputi pola makan tinggi lemak jenuh, serta faktor genetik. Pengelolaan kolesterol dapat dilakukan dengan menerapkan pola makan sehat.</p>
+                    <button class="primary-btn-penyakit" onclick="openPopup3()">Pelajari Lebih →</button>
+                    <a href="penyakit.html">
+                    <button class="secondary-btn-penyakit">Penyakit Lainnya </button>
+                    </a>
+                </div>
+                <div class="card2 card_highlight2"></div>
+                <div id="popup3" class="popup3" style="display: none;">
+                    <div class="popup-content2">
+                        <span class="close-btn" onclick="closePopup3()">&times;</span>
+                        <div class="popup_highlight3"></div>
+                        <h2>Kolesterol Tinggi: <br> Risiko PKV</h2>
+                        <p>Kolesterol tinggi adalah kondisi di mana kadar kolesterol dalam darah melebihi batas normal. Kolesterol sendiri adalah zat lemak yang dibutuhkan tubuh untuk membangun sel dan memproduksi hormon. Namun, kadar kolesterol yang berlebihan dapat meningkatkan risiko penyakit jantung dan stroke.
+
+                            <br><br>
+                            
+                            Jenis-Jenis Kolesterol
+                            Kolesterol dalam darah terdiri dari beberapa jenis utama:
+                            
+                            ✅ Low-Density Lipoprotein (LDL) – "Kolesterol Jahat"
+                            LDL dapat menumpuk di dinding arteri dan membentuk plak, yang menyebabkan penyempitan pembuluh darah dan meningkatkan risiko penyakit jantung.
+                            
+                            ✅ High-Density Lipoprotein (HDL) – "Kolesterol Baik"
+                            HDL membantu mengangkut kolesterol dari darah kembali ke hati untuk dibuang, sehingga dapat melindungi tubuh dari penyakit kardiovaskular.
+                            
+                            ✅ Trigliserida
+                            Merupakan jenis lemak dalam darah yang meningkat akibat konsumsi kalori berlebih. Kadar trigliserida yang tinggi dikaitkan dengan peningkatan risiko penyakit jantung.
+                            
+                            <br><br>
+                            
+                            Penyebab Kolesterol Tinggi
+                            Beberapa faktor yang dapat menyebabkan peningkatan kadar kolesterol dalam darah meliputi:
+                            
+                            🔴 Pola Makan Tidak Sehat – Konsumsi makanan tinggi lemak jenuh dan trans, seperti gorengan, makanan cepat saji, dan produk olahan susu tinggi lemak.
+                            
+                            🔴 Kurangnya Aktivitas Fisik – Gaya hidup sedentari menyebabkan penurunan kadar HDL dan peningkatan LDL.
+                            
+                            🔴 Obesitas – Berat badan berlebih dapat meningkatkan kadar LDL dan trigliserida serta menurunkan HDL.
+                            
+                            🔴 Merokok – Rokok dapat menurunkan kadar HDL dan mempercepat pembentukan plak di arteri.
+                            
+                            🔴 Faktor Genetik – Beberapa orang memiliki kondisi yang disebut hiperkolesterolemia familial, yang menyebabkan kadar kolesterol tinggi sejak lahir.
+                            
+                            🔴 Kondisi Medis – Penyakit seperti diabetes, hipotiroidisme, dan sindrom metabolik dapat meningkatkan kadar kolesterol dalam darah.
+                            
+                            <br><br>
+                            
+                            Gejala Kolesterol Tinggi
+                            Kolesterol tinggi sering kali tidak menimbulkan gejala hingga menyebabkan komplikasi serius. Namun, beberapa tanda yang mungkin muncul meliputi:
+                            
+                            ✅ Xanthomas – Timbunan lemak berwarna kuning di kulit, terutama di sekitar mata, siku, atau lutut.
+                            
+                            ✅ Nyeri Dada (Angina) – Akibat penyumbatan arteri yang menghambat aliran darah ke jantung.
+                            
+                            ✅ Kesemutan atau Mati Rasa – Bisa terjadi jika aliran darah ke otak atau ekstremitas terganggu.
+                            
+                            ✅ Tekanan Darah Tinggi – Kolesterol yang menumpuk di arteri dapat menyebabkan tekanan darah meningkat.
+                            
+                            ✅ Serangan Jantung atau Stroke – Jika plak di arteri pecah dan membentuk gumpalan darah yang menyumbat aliran darah.
+                            
+                            <br><br>
+                            
+                            Dampak dan Komplikasi Kolesterol Tinggi
+                            Jika tidak dikontrol, kolesterol tinggi dapat menyebabkan berbagai komplikasi serius, seperti:
+                            
+                            🔴 Aterosklerosis – Penyempitan dan pengerasan arteri akibat penumpukan plak kolesterol.
+                            
+                            🔴 Penyakit Jantung Koroner – Penyempitan pembuluh darah jantung yang dapat menyebabkan nyeri dada atau serangan jantung.
+                            
+                            🔴 Stroke – Terjadi ketika aliran darah ke otak terhambat akibat penyumbatan atau pecahnya pembuluh darah.
+                            
+                            🔴 Penyakit Arteri Perifer (PAD) – Penyempitan pembuluh darah di kaki yang menyebabkan nyeri saat berjalan dan meningkatkan risiko amputasi.
+                            
+                            🔴 Hipertensi (Tekanan Darah Tinggi) – Kolesterol tinggi dapat membuat jantung bekerja lebih keras untuk memompa darah.
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="penyakit3">
+                <div class="card3 card_highlight3"></div>
+                <div class="card3">
+                    <h1>(GERD): Gangguan Pencernaan</h1>
+                    <p style="margin-bottom: 15px;">Gastroesophageal reflux disease (GERD) adalah kondisi di mana asam lambung naik kembali ke kerongkongan, menyebabkan sensasi terbakar di dada (heartburn).</p>
+                    <p class="second-p-penyakit">Jika tidak ditangani, GERD dapat menyebabkan komplikasi serius seperti radang kerongkongan dan gangguan pernapasan.</p>
+                    <button class="primary-btn-penyakit" onclick="openPopup4()">Pelajari Lebih →</button>
+
+                    <a href="penyakit.html">
+                    <button class="secondary-btn-penyakit">Penyakit Lainnya </button>
+                    </a>
+                </div>
+                <div id="popup4" class="popup4" style="display: none;">
+                    <div class="popup-content4">
+                        <span class="close-btn" onclick="closePopup4()">&times;</span>
+                        <div class="popup_highlight4"></div>
+                        <h2>(GERD): Gangguan Pencernaan</h2>
+                        <p>GERD (Gastroesophageal Reflux Disease) adalah gangguan pencernaan kronis yang terjadi ketika asam lambung naik ke kerongkongan secara berulang. Kondisi ini menyebabkan iritasi pada lapisan kerongkongan dan dapat menimbulkan gejala seperti nyeri dada (heartburn), rasa asam di mulut, sulit menelan, batuk kronis, dan sensasi terbakar di dada terutama setelah makan atau saat berbaring. <br><br>
+
+                            Penyebab utama GERD adalah melemahnya otot sfingter esofagus bagian bawah, yang seharusnya berfungsi untuk mencegah asam lambung naik. Faktor risiko yang dapat memperburuk kondisi ini meliputi pola makan tidak sehat, obesitas, stres, konsumsi alkohol, merokok, serta kebiasaan langsung berbaring setelah makan. <br><br>
+                            
+                            Untuk mengelola GERD, perubahan gaya hidup sangat dianjurkan, seperti menghindari makanan pemicu (makanan pedas, berlemak, dan asam), makan dalam porsi kecil tetapi lebih sering, serta tidur dengan posisi kepala lebih tinggi. Dalam beberapa kasus, pengobatan dengan antasida atau inhibitor pompa proton (PPI) mungkin diperlukan untuk mengurangi produksi asam lambung dan mencegah komplikasi lebih lanjut. <br><br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="olahraga" style="z-index: 10;">
+        <img class="background-olahraga" src="../Images/background-olahraga.svg" alt="">
+        <div class="olahraga-text">
+            <div class="text-olahraga-kanan">
+                <h1><span style="color: #30B0C7;">→</span>  Aktifitas Kesehatan</h1>
+            </div>
+            <div class="text-olahraga-kiri">
+                <p>Beberapa aktifitas atau olahraga yang dapat membantu menjaga kebugaran tubuh anda</p>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-card">
+                <div class="olahraga-img1"></div>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                </div>
+                <h3>Berenang</h3>
+                <p>Berenang adalah gerakan sewaktu bergerak di air. Berenang biasanya dilakukan tanpa perlengkapan buatan.</p>
+                <a href="aktifitas.html">
+                <button class="primary-btn-aktifitas">Pelajari Lebih →</button>
+                </a>
+            </div>
+            <div class="blog-card">
+                <div class="olahraga-img2"></div>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                </div>
+                <h3>Jogging / Running</h3>
+                <p>joging adalah suatu bentuk berlari dengan kecepatan lambat atau santai. Lari laun bertujuan untuk meningkatkan kebugaran jasmani.</p>
+                <a href="aktifitas.html">
+                    <button class="primary-btn-aktifitas">Pelajari Lebih →</button>
+                </a>
+            </div>
+    
+            <div class="blog-card">
+                <div class="olahraga-img3"></div>
+                <div class="tags">
+                    <div class="tag">Turunkan Berat Badan</div>
+                    <div class="tag">Latihan</div>
+                </div>
+                <h3>Bersepeda</h3>
+                <p>Bersepeda adalah sebuah kegiatan rekreasi atau olahraga, serta merupakan salah satu moda transportasi darat yang menggunakan sepeda.</p>
+                <a href="aktifitas.html">
+                    <button class="primary-btn-aktifitas">Pelajari Lebih →</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-top">
+                <div class="logo-footer"></div>
+                <p class="desk-footer">Menjaga Kesehatan Indonesia</p>
+
+                <div class="button-container">
+                    <a href="login.html">
+                    <button type="button" class="button">Masuk</button>
+                    </a>
+                    <a href="register.html">
+                    <button type="button" class="button">Daftar</button>
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© FitSmart 2025. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="konsumsi.html">Konsumsi</a>
+                    <a href="penyakit.html">Penyakit</a>
+                    <a href="aktifitas.html">Aktifitas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSmart - Edukasi Kesehatan</title>
+    <link rel="stylesheet" href="../Style/konsumsi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../Images/logo-putih.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars" style="font-size: 23px;"></i>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html">
+                <button type="button" class="btn-masuk">Masuk</button>
+            </a>
+            <a href="register.html">
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+            <li class="button2"><a href="#">
+                <button type="button" class="btn-masuk">Masuk</button>
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a></li>
+        </ul>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const toggleBtnIcon = document.querySelector('.toggle-btn i'); // Ikon di dalamnya
+            const dropDownMenu = document.querySelector('.dropdown-menu');
+
+            toggleBtn.addEventListener("click", function () {
+                // Toggle class "open" untuk menampilkan atau menyembunyikan dropdown
+                dropDownMenu.classList.toggle('open');
+
+                // Deklarasikan isOpen dalam fungsi ini agar tidak undefined
+                let isOpen = dropDownMenu.classList.contains('open');
+
+                // Ganti ikon FontAwesome
+                toggleBtnIcon.className = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars';
+            });
+        </script>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="tag-text">MENJAGA KESEHATAN UNTUK HIDUP LEBIH BAIK</h2>
+            <p style="position: absolute; font-size: 55px; margin-top: -5rem; margin-left: 50rem;" class="emote">🍎</p>
+            <p style="position: absolute; font-size: 55px; margin-top: 12rem;" class="emote">🫐</p>
+            <h1 class="judul-text1">Makanan & Minuman Sehat</h1>
+                <p>Silakan berikan deskripsi baru yang ingin Anda gunakan, atau jika ingin saya membantu merangkai kalimat yang lebih menarik, beri tahu saya konsep atau kata kunci yang ingin dimasukkan! 😊</p>            
+            <div class="buttons">
+                <a href="#sayur">
+                <button class="primary-btn">Pelajari Lebih →</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+        </div>
+    </section>
+
+    <button class="floating-button" onclick="toggleAI()">AI</button>
+    <div class="chatBot" id="aiBox">
+        <header>AI FitSmart</header>
+        <ul class="chatbox">
+        </ul>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder=""></textarea>
+            <button class="button-ai" id="sendBTN">Kirim</button>
+        </div>
+    </div>
+
+    <section class="sayur" id="sayur">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 20%;">
+                    <div class="text-brokoli">
+                        <h1>Brokoli</h1>
+                        <p>Sayuran</p>
+                        <button class="open-popup-btn" onclick="openPopup9()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img src="../images/brokoli.svg">
+                    </div>
+                </div>
+                <div id="popup9" class="popup9" style="display: none;">
+                    <div class="popup-content9">
+                        <span class="close-btn9" onclick="closePopup9()">&times;</span>
+                        <div class="popup_highlight1-9"></div>
+                        <h2>Brokoli</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Brokoli adalah salah satu sayuran hijau yang kaya akan nutrisi dan memiliki berbagai manfaat bagi kesehatan. Sayuran ini mengandung serat, vitamin, mineral, dan senyawa antioksidan yang dapat membantu meningkatkan daya tahan tubuh serta melindungi tubuh dari berbagai penyakit. Brokoli sering dianggap sebagai superfood karena memiliki kandungan gizi yang sangat tinggi.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu kandungan utama dalam brokoli adalah vitamin C, yang berperan penting dalam meningkatkan sistem kekebalan tubuh dan melindungi tubuh dari infeksi. Vitamin C juga berfungsi sebagai antioksidan yang membantu menangkal radikal bebas, sehingga dapat mencegah penuaan dini serta mengurangi risiko penyakit kronis seperti kanker dan penyakit jantung.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, brokoli kaya akan serat yang bermanfaat bagi kesehatan pencernaan. Serat membantu memperlancar sistem pencernaan, mencegah sembelit, dan mendukung pertumbuhan bakteri baik dalam usus. Dengan mengonsumsi brokoli secara rutin, kesehatan usus dapat terjaga dengan lebih baik.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Brokoli juga mengandung senyawa sulforaphane, yang dikenal memiliki sifat anti-kanker. Sulforaphane bekerja dengan cara menghambat pertumbuhan sel kanker serta meningkatkan enzim detoksifikasi dalam tubuh yang membantu menghilangkan zat-zat berbahaya. Beberapa penelitian menunjukkan bahwa konsumsi brokoli secara rutin dapat mengurangi risiko kanker, terutama kanker usus besar, prostat, dan payudara.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan vitamin K dan kalsium dalam brokoli sangat baik untuk kesehatan tulang. Vitamin K berperan dalam proses pembekuan darah dan membantu penyerapan kalsium, sementara kalsium sendiri penting untuk menjaga kepadatan tulang dan mencegah osteoporosis. Mengonsumsi brokoli secara rutin dapat membantu menjaga kekuatan tulang, terutama bagi lansia.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Brokoli juga mendukung kesehatan jantung karena mengandung kalium dan serat. Kalium membantu mengontrol tekanan darah dengan melebarkan pembuluh darah dan mengurangi tekanan pada sistem kardiovaskular. Sementara itu, serat dalam brokoli membantu menurunkan kadar kolesterol jahat (LDL) yang berkontribusi terhadap penyakit jantung dan stroke.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, brokoli mengandung lutein dan zeaxanthin, dua jenis antioksidan yang berperan dalam menjaga kesehatan mata. Kedua senyawa ini membantu melindungi mata dari kerusakan akibat sinar UV dan mengurangi risiko penyakit mata seperti degenerasi makula serta katarak.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Brokoli juga merupakan sumber folat yang baik, yang sangat penting bagi ibu hamil. Folat membantu dalam perkembangan sistem saraf janin dan dapat mengurangi risiko cacat tabung saraf pada bayi yang sedang berkembang. Oleh karena itu, konsumsi brokoli selama kehamilan sangat dianjurkan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Sayuran ini juga dapat membantu dalam program penurunan berat badan karena rendah kalori tetapi tinggi serat dan air, sehingga memberikan rasa kenyang lebih lama tanpa menambah banyak kalori dalam tubuh. Dengan demikian, brokoli menjadi pilihan makanan yang sangat baik bagi mereka yang sedang menjalani diet sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Brokoli dapat dikonsumsi dalam berbagai bentuk, seperti direbus, dikukus, ditumis, atau dijadikan bahan dalam salad dan sup. Namun, untuk mempertahankan kandungan nutrisinya, sebaiknya brokoli tidak dimasak terlalu lama. Mengukus brokoli selama beberapa menit dapat menjaga kandungan vitamin dan mineralnya tetap optimal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaat kesehatan yang ditawarkannya, brokoli adalah pilihan makanan yang sangat baik untuk mendukung kesehatan tubuh secara keseluruhan. Mengonsumsi brokoli secara rutin dapat membantu menjaga sistem kekebalan tubuh, kesehatan jantung, tulang, mata, serta mencegah berbagai penyakit kronis.
+                        </p>                                                                                                                                                       
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;">
+                    <div class="text-brokoli">
+                        <h1>Bayam</h1>
+                        <p>Sayuran</p>
+                        <button class="open-popup-btn" onclick="openPopup8()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img style="margin-top: 60px;" src="../images/bayam.jpeg">
+                    </div>
+                </div>
+                <div id="popup8" class="popup8" style="display: none;">
+                    <div class="popup-content8">
+                        <span class="close-btn8" onclick="closePopup8()">&times;</span>
+                        <div class="popup_highlight1-8"></div>
+                        <h2>Bayam</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bayam adalah salah satu sayuran hijau yang kaya akan nutrisi dan memiliki banyak manfaat bagi kesehatan. Sayuran ini mengandung berbagai vitamin, mineral, serat, dan antioksidan yang dapat mendukung berbagai fungsi tubuh. Bayam sering dianggap sebagai makanan super karena manfaatnya yang luas, mulai dari meningkatkan kesehatan mata, menjaga kesehatan jantung, hingga mendukung sistem kekebalan tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu kandungan utama dalam bayam adalah vitamin A, yang berperan penting dalam menjaga kesehatan mata. Vitamin A membantu melindungi kornea dan mendukung penglihatan dalam kondisi minim cahaya. Selain itu, bayam juga mengandung lutein dan zeaxanthin, dua antioksidan kuat yang membantu melindungi mata dari efek buruk paparan sinar biru serta mengurangi risiko degenerasi makula dan katarak.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bayam juga kaya akan zat besi, yang sangat penting dalam pembentukan sel darah merah dan mencegah anemia. Zat besi dalam bayam membantu tubuh dalam mengangkut oksigen ke seluruh jaringan, sehingga meningkatkan energi dan mengurangi rasa lelah. Untuk meningkatkan penyerapan zat besi dari bayam, disarankan untuk mengonsumsinya bersama sumber vitamin C seperti jeruk atau tomat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan vitamin C dalam bayam berperan sebagai antioksidan yang membantu meningkatkan daya tahan tubuh dan mempercepat proses penyembuhan luka. Vitamin C juga mendukung produksi kolagen, yang penting untuk kesehatan kulit, rambut, dan sendi. Konsumsi bayam secara rutin dapat membantu menjaga kulit tetap sehat, elastis, dan tampak lebih muda.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bayam mengandung magnesium, kalium, dan nitrat alami yang bermanfaat untuk kesehatan jantung. Magnesium dan kalium membantu mengatur tekanan darah, sementara nitrat alami dalam bayam dapat membantu melebarkan pembuluh darah, meningkatkan sirkulasi, dan mengurangi risiko penyakit kardiovaskular seperti hipertensi dan stroke. Konsumsi bayam secara teratur dapat mendukung kesehatan jantung dan menjaga keseimbangan elektrolit dalam tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Serat yang tinggi dalam bayam sangat baik untuk kesehatan pencernaan. Serat membantu melancarkan sistem pencernaan, mencegah sembelit, serta mendukung pertumbuhan bakteri baik dalam usus. Dengan pencernaan yang sehat, tubuh dapat lebih efektif menyerap nutrisi dan membuang zat-zat beracun.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu keunggulan bayam adalah kandungan vitamin K yang tinggi. Vitamin K berperan penting dalam proses pembekuan darah dan mendukung kesehatan tulang. Kombinasi vitamin K dan kalsium dalam bayam membantu memperkuat tulang dan mengurangi risiko osteoporosis, terutama pada orang lanjut usia.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bayam juga dikenal memiliki sifat anti-inflamasi berkat kandungan antioksidan seperti flavonoid dan karotenoid. Antioksidan ini membantu mengurangi peradangan dalam tubuh yang dapat menyebabkan berbagai penyakit kronis seperti diabetes tipe 2, penyakit jantung, dan kanker. Dengan mengonsumsi bayam secara rutin, tubuh akan mendapatkan perlindungan alami dari berbagai penyakit yang berhubungan dengan peradangan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain manfaat kesehatan, bayam juga merupakan makanan rendah kalori yang cocok untuk diet. Sayuran ini memberikan rasa kenyang lebih lama tanpa menambah banyak kalori, sehingga dapat membantu dalam program penurunan berat badan. Kandungan air yang tinggi dalam bayam juga membantu menjaga hidrasi tubuh dan mendukung metabolisme yang sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bayam dapat dikonsumsi dalam berbagai bentuk, baik dimakan mentah dalam salad, ditumis, direbus, atau dijadikan jus hijau yang menyegarkan. Dengan kandungan nutrisinya yang luar biasa, bayam adalah pilihan tepat untuk dimasukkan dalam pola makan sehari-hari guna mendukung kesehatan tubuh secara menyeluruh.
+                        </p>                                                                                                                               
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;">
+                    <div class="text-brokoli">
+                        <h1>Kale</h1>
+                        <p>Sayuran</p>
+                        <button class="open-popup-btn" onclick="openPopup7()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    <img style="margin-top: 40px;" src="../images/kale.jpg">
+                    </div>
+                </div>
+                <div id="popup7" class="popup7" style="display: none;">
+                    <div class="popup-content7">
+                        <span class="close-btn7" onclick="closePopup7()">&times;</span>
+                        <div class="popup_highlight1-7"></div>
+                        <h2>Kale</h2>
+                        <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Kale adalah salah satu jenis sayuran hijau yang dikenal sebagai <em>superfood</em> karena kandungan nutrisinya yang sangat tinggi. Sayuran ini berasal dari keluarga <em>Brassicaceae</em>, yang juga mencakup brokoli, kubis, dan kembang kol. Kale memiliki daun yang keriting atau bergelombang dengan warna hijau tua hingga ungu. Konsumsi kale secara rutin dapat memberikan berbagai manfaat luar biasa bagi kesehatan tubuh.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Kale kaya akan vitamin dan mineral penting yang dibutuhkan tubuh. Salah satu kandungan utamanya adalah vitamin K, yang berperan dalam pembekuan darah dan kesehatan tulang. Asupan vitamin K yang cukup dapat membantu mencegah osteoporosis dan memperkuat struktur tulang. Selain itu, kale juga merupakan sumber vitamin A yang baik untuk menjaga kesehatan mata dan meningkatkan sistem kekebalan tubuh. Vitamin C dalam kale bertindak sebagai antioksidan yang melindungi sel-sel tubuh dari kerusakan akibat radikal bebas serta mendukung produksi kolagen yang penting untuk kesehatan kulit dan sendi.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Selain vitamin, kale mengandung berbagai mineral seperti kalsium, magnesium, dan kalium. Kalsium dalam kale sangat bermanfaat bagi kesehatan tulang dan gigi, bahkan beberapa penelitian menunjukkan bahwa kalsium dari kale lebih mudah diserap oleh tubuh dibandingkan dengan kalsium dari produk susu. Magnesium dalam kale berperan dalam lebih dari 300 reaksi enzim di dalam tubuh, termasuk regulasi tekanan darah dan fungsi otot. Sementara itu, kalium membantu menjaga keseimbangan elektrolit dan menurunkan risiko tekanan darah tinggi serta penyakit jantung.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Kale juga dikenal memiliki kandungan serat yang tinggi, yang berperan penting dalam menjaga kesehatan pencernaan. Serat membantu melancarkan sistem pencernaan, mencegah sembelit, dan mendukung pertumbuhan bakteri baik di usus. Selain itu, serat juga membantu mengontrol kadar gula darah dengan memperlambat penyerapan glukosa dalam tubuh, sehingga sangat bermanfaat bagi penderita diabetes.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Sebagai sayuran rendah kalori dan tinggi nutrisi, kale sering menjadi pilihan utama dalam program diet sehat. Kale mengandung banyak air dan serat, yang memberikan rasa kenyang lebih lama sehingga dapat membantu mengurangi asupan kalori berlebih. Dengan demikian, konsumsi kale dapat mendukung penurunan berat badan yang sehat tanpa mengorbankan asupan nutrisi penting.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Kandungan antioksidan dalam kale, seperti beta-karoten, flavonoid, dan polifenol, berperan dalam melawan stres oksidatif yang dapat menyebabkan penuaan dini dan berbagai penyakit kronis. Antioksidan ini membantu mengurangi peradangan dalam tubuh dan menurunkan risiko penyakit jantung, kanker, serta gangguan neurodegeneratif seperti Alzheimer.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Selain itu, kale juga mengandung senyawa sulfur yang dikenal sebagai <em>glucosinolates</em>, yang memiliki sifat detoksifikasi dan membantu tubuh dalam menetralisir racun. Senyawa ini juga diketahui memiliki efek antikanker dengan cara menghambat pertumbuhan sel kanker dan mendukung proses regenerasi sel yang sehat.
+                            </p>
+                            
+                            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                                Dengan berbagai manfaat yang luar biasa ini, kale adalah pilihan yang sangat baik untuk dimasukkan dalam pola makan sehari-hari. Kale dapat dikonsumsi dalam berbagai bentuk, seperti salad, jus, smoothie, tumisan, atau bahkan dibuat menjadi keripik kale yang renyah. Konsumsi kale secara rutin dapat membantu menjaga kesehatan tubuh secara menyeluruh, mulai dari sistem pencernaan, kesehatan jantung, hingga meningkatkan daya tahan tubuh.
+                            </p>                                                                                                         
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 35%;">
+                    <div class="text-brokoli">
+                        <h1>Kangkung</h1>
+                        <p>Sayuran</p>
+                        <button class="open-popup-btn" onclick="openPopup6()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    <img style="width: 120%; margin-top: 50px; margin-left: -30px;" src="../images/kangkung.png">
+                    </div>
+                </div>
+                <div id="popup6" class="popup6" style="display: none;">
+                    <div class="popup-content6">
+                        <span class="close-btn6" onclick="closePopup6()">&times;</span>
+                        <div class="popup_highlight1-6"></div>
+                        <h2>Kangkung</h2>
+                        <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                            Kangkung (<em>Ipomoea aquatica</em>) adalah salah satu sayuran hijau yang populer di Asia Tenggara, terutama di Indonesia. Sayuran ini tumbuh dengan cepat di daerah berair dan memiliki tekstur yang renyah serta rasa yang segar, menjadikannya pilihan utama dalam berbagai hidangan seperti tumisan, sup, hingga lalapan. Selain mudah diolah, kangkung juga memiliki kandungan nutrisi yang kaya dan beragam manfaat bagi kesehatan tubuh.  
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                            Kangkung mengandung berbagai vitamin dan mineral yang penting, seperti vitamin A, vitamin C, dan vitamin B kompleks. Vitamin A dalam kangkung berperan dalam menjaga kesehatan mata serta meningkatkan daya tahan tubuh. Kandungan vitamin C yang tinggi berfungsi sebagai antioksidan yang membantu melawan radikal bebas serta meningkatkan sistem imun tubuh. Selain itu, kandungan zat besi dalam kangkung sangat baik untuk mencegah anemia karena membantu pembentukan sel darah merah.  
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                            Serat dalam kangkung juga berperan penting dalam melancarkan sistem pencernaan dan mencegah sembelit. Serat ini membantu pergerakan usus menjadi lebih teratur, sehingga sistem pencernaan tetap sehat. Kangkung juga memiliki efek menenangkan yang dapat membantu mengurangi stres dan meningkatkan kualitas tidur. Beberapa penelitian bahkan menyebutkan bahwa kangkung memiliki kandungan magnesium yang dapat membantu merilekskan otot dan saraf, sehingga tubuh menjadi lebih rileks setelah dikonsumsi.  
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                            Selain itu, kangkung mengandung kadar air yang cukup tinggi, sehingga dapat membantu menjaga keseimbangan cairan dalam tubuh. Sayuran ini juga rendah kalori dan lemak, menjadikannya pilihan yang baik bagi mereka yang sedang menjalani program diet sehat. Dengan konsumsi yang cukup dan pengolahan yang tepat, kangkung dapat memberikan manfaat besar bagi kesehatan tubuh secara keseluruhan.  
+                        </p>                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Buah">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 20%;">>
+                    <div class="text-brokoli">
+                        <h1>Apel</h1>
+                        <p>Buah</p>
+                        <button class="open-popup-btn" onclick="openPopup10()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img style="margin-top: 30px; margin-left: 10px; width: 85%;" src="../images/apel.jpg">
+                    </div>
+                </div>
+                <div id="popup10" class="popup10" style="display: none;">
+                    <div class="popup-content10">
+                        <span class="close-btn10" onclick="closePopup10()">&times;</span>
+                        <div class="popup_highlight1-10"></div>
+                        <h2>Apel</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Apel adalah salah satu buah yang paling populer di dunia dan dikenal karena kandungan nutrisinya yang tinggi serta berbagai manfaat kesehatannya. Buah ini kaya akan serat, vitamin, dan antioksidan yang dapat membantu menjaga kesehatan tubuh secara keseluruhan. Selain itu, apel memiliki rasa yang segar dan dapat dikonsumsi langsung, dijadikan jus, atau dicampurkan dalam berbagai hidangan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama apel adalah kandungan seratnya yang tinggi, terutama dalam kulitnya. Serat dalam apel membantu melancarkan sistem pencernaan, mencegah sembelit, dan mendukung kesehatan usus dengan memberi makan bakteri baik dalam saluran pencernaan. Selain itu, serat juga berperan dalam menjaga kadar gula darah tetap stabil dengan memperlambat penyerapan gula ke dalam darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Apel mengandung berbagai jenis antioksidan seperti quercetin, catechin, dan chlorogenic acid yang berperan dalam melindungi sel-sel tubuh dari kerusakan akibat radikal bebas. Senyawa ini membantu mengurangi peradangan, meningkatkan daya tahan tubuh, serta mengurangi risiko penyakit kronis seperti kanker dan penyakit jantung.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat apel lainnya adalah kemampuannya dalam menjaga kesehatan jantung. Kandungan serat larut dalam apel dapat membantu menurunkan kadar kolesterol jahat (LDL) dalam darah, yang merupakan faktor risiko utama penyakit jantung. Selain itu, apel juga mengandung polifenol yang dapat membantu mengatur tekanan darah dan meningkatkan fungsi pembuluh darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Apel juga dikenal baik untuk mengontrol berat badan. Buah ini rendah kalori tetapi tinggi serat dan air, sehingga dapat memberikan rasa kenyang lebih lama. Dengan mengonsumsi apel sebagai camilan sehat, seseorang dapat mengurangi asupan kalori berlebih dan lebih mudah dalam mengatur pola makan yang seimbang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, apel memiliki indeks glikemik yang rendah, sehingga tidak menyebabkan lonjakan gula darah yang drastis setelah dikonsumsi. Hal ini menjadikan apel sebagai pilihan buah yang aman untuk penderita diabetes atau bagi mereka yang ingin menjaga kadar gula darah tetap stabil.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan vitamin C dalam apel juga sangat bermanfaat bagi kesehatan kulit. Vitamin ini berperan sebagai antioksidan yang membantu melindungi kulit dari kerusakan akibat paparan sinar UV serta meningkatkan produksi kolagen yang menjaga elastisitas kulit. Dengan mengonsumsi apel secara rutin, kulit dapat terlihat lebih sehat, cerah, dan awet muda.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Apel juga mendukung kesehatan otak berkat kandungan antioksidannya. Beberapa penelitian menunjukkan bahwa senyawa dalam apel dapat membantu melindungi sel-sel otak dari stres oksidatif, yang dapat mengurangi risiko penyakit neurodegeneratif seperti Alzheimer dan Parkinson.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain manfaat tersebut, apel juga berkontribusi dalam menjaga kesehatan gigi. Mengunyah apel dapat membantu membersihkan gigi secara alami dengan merangsang produksi air liur, yang berfungsi untuk mengurangi pertumbuhan bakteri dalam mulut serta mencegah pembentukan plak dan gigi berlubang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaat luar biasa ini, apel menjadi salah satu buah yang sangat baik untuk dikonsumsi secara rutin. Mengonsumsi apel tidak hanya memberikan nutrisi yang penting bagi tubuh, tetapi juga membantu dalam menjaga kesehatan jantung, kulit, otak, dan sistem pencernaan secara keseluruhan.
+                        </p>                        
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;">>
+                    <div class="text-brokoli">
+                        <h1>Pisang</h1>
+                        <p>Buah</p>
+                        <button class="open-popup-btn" onclick="openPopup11()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img style="margin-top: 30px;" src="../images/banan.jpg">
+                    </div>
+                </div>
+                <div id="popup11" class="popup11" style="display: none;">
+                    <div class="popup-content11">
+                        <span class="close-btn11" onclick="closePopup11()">&times;</span>
+                        <div class="popup_highlight1-11"></div>
+                        <h2>Pisang</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Pisang adalah salah satu buah tropis yang paling populer dan dikonsumsi di seluruh dunia. Buah ini kaya akan nutrisi penting seperti serat, vitamin, dan mineral yang memberikan berbagai manfaat kesehatan bagi tubuh. Selain itu, pisang memiliki rasa yang manis dan tekstur yang lembut, menjadikannya pilihan yang ideal untuk dikonsumsi langsung maupun diolah dalam berbagai hidangan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama pisang adalah kandungan seratnya yang tinggi, yang membantu melancarkan sistem pencernaan dan mencegah sembelit. Serat dalam pisang juga berperan dalam menjaga keseimbangan mikrobiota usus, yang sangat penting untuk kesehatan pencernaan secara keseluruhan. Kandungan prebiotik dalam pisang dapat mendukung pertumbuhan bakteri baik dalam usus, sehingga meningkatkan fungsi sistem pencernaan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Pisang juga merupakan sumber energi yang sangat baik karena kaya akan karbohidrat alami, terutama dalam bentuk gula seperti glukosa, fruktosa, dan sukrosa. Oleh karena itu, pisang sering dikonsumsi oleh para atlet dan individu yang aktif sebagai sumber energi cepat sebelum atau setelah berolahraga.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan kalium dalam pisang sangat tinggi, menjadikannya buah yang sangat baik untuk kesehatan jantung. Kalium berperan dalam mengatur tekanan darah dengan membantu mengurangi efek natrium dalam tubuh. Asupan kalium yang cukup juga dapat menurunkan risiko penyakit kardiovaskular seperti stroke dan serangan jantung.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain kalium, pisang juga mengandung vitamin B6 dalam jumlah yang signifikan. Vitamin ini penting untuk fungsi otak, membantu produksi neurotransmitter seperti serotonin dan dopamin yang berperan dalam menjaga suasana hati dan mengurangi stres. Oleh karena itu, konsumsi pisang dapat membantu meningkatkan mood dan mengurangi gejala depresi ringan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lainnya dari pisang adalah kemampuannya dalam menjaga kadar gula darah tetap stabil. Meskipun pisang mengandung gula alami, indeks glikemiknya yang relatif rendah membuatnya aman untuk dikonsumsi dalam jumlah yang wajar oleh penderita diabetes. Serat dalam pisang membantu memperlambat penyerapan gula ke dalam aliran darah, sehingga mencegah lonjakan gula darah yang tiba-tiba.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Pisang juga mengandung antioksidan seperti dopamin dan vitamin C yang membantu melindungi sel-sel tubuh dari kerusakan akibat radikal bebas. Antioksidan ini berperan dalam meningkatkan sistem kekebalan tubuh serta mengurangi risiko berbagai penyakit kronis seperti kanker dan penyakit neurodegeneratif.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bagi ibu hamil, pisang merupakan sumber nutrisi yang baik karena mengandung asam folat yang penting untuk perkembangan janin. Selain itu, pisang juga dapat membantu meredakan mual di pagi hari (morning sickness) yang sering dialami oleh ibu hamil pada trimester pertama.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, pisang dapat membantu dalam proses pemulihan otot setelah berolahraga. Kandungan elektrolit seperti kalium dan magnesium dalam pisang membantu mengurangi kram otot dan mempercepat pemulihan tubuh setelah aktivitas fisik yang intens.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, pisang adalah pilihan buah yang sangat baik untuk dikonsumsi sehari-hari. Baik sebagai camilan sehat, tambahan dalam smoothie, atau campuran dalam makanan lainnya, pisang memberikan nutrisi penting yang mendukung kesehatan tubuh secara menyeluruh.
+                        </p>
+                                                
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;">>
+                    <div class="text-brokoli">
+                        <h1>Jeruk</h1>
+                        <p>Buah</p>
+                        <button class="open-popup-btn" onclick="openPopup12()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img style="width: 70%; margin-top: 30px; margin-left: 35px;" src="../images/jeruk.jpeg">
+                     </div>
+                </div>
+                <div id="popup12" class="popup12" style="display: none;">
+                    <div class="popup-content12">
+                        <span class="close-btn12" onclick="closePopup12()">&times;</span>
+                        <div class="popup_highlight1-12"></div>
+                        <h2>Jeruk</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Jeruk adalah salah satu buah yang paling populer dan banyak dikonsumsi di seluruh dunia. Buah ini terkenal dengan rasa manis dan segarnya, serta kandungan vitamin C yang tinggi. Jeruk berasal dari keluarga <i>Rutaceae</i> dan memiliki berbagai varietas yang menawarkan manfaat kesehatan luar biasa bagi tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama jeruk adalah kandungan vitamin C yang sangat tinggi. Vitamin C berperan sebagai antioksidan kuat yang membantu melindungi sel-sel tubuh dari kerusakan akibat radikal bebas. Antioksidan ini juga berperan dalam meningkatkan sistem kekebalan tubuh, membantu tubuh melawan infeksi, dan mempercepat penyembuhan luka.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain vitamin C, jeruk juga kaya akan serat, yang sangat baik untuk sistem pencernaan. Serat dalam jeruk membantu melancarkan buang air besar, mencegah sembelit, dan menjaga kesehatan usus. Mengonsumsi jeruk secara rutin juga dapat membantu mengontrol kadar gula darah dan menurunkan risiko diabetes tipe 2.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Jeruk juga memiliki kandungan flavonoid, seperti hesperidin dan naringenin, yang berperan dalam menjaga kesehatan jantung. Flavonoid ini membantu menurunkan kadar kolesterol jahat (LDL) dan meningkatkan kadar kolesterol baik (HDL), sehingga dapat mengurangi risiko penyakit jantung dan stroke. Selain itu, kandungan kalium dalam jeruk membantu mengontrol tekanan darah dengan menyeimbangkan kadar natrium dalam tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lainnya dari jeruk adalah kemampuannya dalam menjaga kesehatan kulit. Vitamin C dalam jeruk berperan dalam produksi kolagen, yang membantu menjaga elastisitas kulit, mencegah penuaan dini, dan membuat kulit tampak lebih cerah serta sehat. Selain itu, antioksidan dalam jeruk dapat membantu mengurangi peradangan dan melindungi kulit dari kerusakan akibat paparan sinar matahari.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Jeruk juga dapat membantu menjaga kesehatan mata. Kandungan vitamin A dan antioksidan seperti lutein dan zeaxanthin dalam jeruk berperan dalam melindungi mata dari degenerasi makula dan katarak. Mengonsumsi jeruk secara rutin dapat membantu mempertahankan ketajaman penglihatan, terutama seiring bertambahnya usia.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, jeruk memiliki sifat anti-inflamasi yang dapat membantu mengurangi risiko penyakit kronis seperti arthritis dan penyakit neurodegeneratif. Kandungan fitokimia dalam jeruk berperan dalam mengurangi peradangan dalam tubuh dan melindungi jaringan dari kerusakan oksidatif.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Jeruk juga baik untuk kesehatan ginjal. Konsumsi jeruk secara rutin dapat membantu mencegah pembentukan batu ginjal dengan meningkatkan kadar sitrat dalam urin, yang berperan dalam menghambat pembentukan kristal kalsium oksalat yang dapat menyebabkan batu ginjal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain memiliki banyak manfaat kesehatan, jeruk juga rendah kalori dan kaya akan air, sehingga sangat baik untuk menjaga hidrasi tubuh dan mendukung program diet sehat. Kandungan airnya yang tinggi membuat tubuh tetap terhidrasi, membantu metabolisme, dan memberikan rasa kenyang lebih lama tanpa menambah banyak kalori.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, jeruk adalah buah yang sangat baik untuk dikonsumsi sehari-hari. Baik dimakan langsung, dijadikan jus, atau digunakan dalam berbagai hidangan, jeruk memberikan nutrisi penting yang mendukung kesehatan tubuh secara menyeluruh.
+                        </p>                        
+                                                
+                        
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 35%;">>
+                    <div class="text-brokoli">
+                        <h1>Berry </h1>
+                        <p>Buah</p>
+                        <button class="open-popup-btn" onclick="openPopup13()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                        <img style="margin-top: 20px; margin-left: 5px;" src="../images/berry.jpg">
+                     </div>
+                </div>
+                <div id="popup13" class="popup13" style="display: none;">
+                    <div class="popup-content13">
+                        <span class="close-btn13" onclick="closePopup13()">&times;</span>
+                        <div class="popup_highlight1-13"></div>
+                        <h2>Berry</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Buah berry adalah kelompok buah yang mencakup berbagai jenis seperti stroberi, blueberry, raspberry, blackberry, dan cranberry. Buah-buahan ini dikenal karena rasa manis atau asamnya yang segar serta kandungan nutrisinya yang sangat tinggi. Berry kaya akan antioksidan, vitamin, mineral, dan serat, yang memberikan berbagai manfaat kesehatan bagi tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama buah berry adalah kandungan antioksidan yang tinggi, terutama anthocyanin, flavonoid, dan resveratrol. Antioksidan ini berperan dalam melawan radikal bebas yang dapat menyebabkan kerusakan sel dan berkontribusi pada penuaan dini serta berbagai penyakit kronis seperti kanker dan penyakit jantung. Mengonsumsi berry secara rutin dapat membantu meningkatkan kesehatan secara keseluruhan dengan melindungi sel-sel tubuh dari kerusakan oksidatif.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Buah berry juga sangat baik untuk kesehatan jantung. Kandungan flavonoid dalam berry membantu menurunkan tekanan darah, mengurangi peradangan, dan meningkatkan kadar kolesterol baik (HDL) serta menurunkan kadar kolesterol jahat (LDL). Selain itu, konsumsi berry secara rutin telah dikaitkan dengan penurunan risiko penyakit kardiovaskular dan stroke.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lainnya dari berry adalah kemampuannya dalam meningkatkan fungsi otak dan daya ingat. Antioksidan dalam berry membantu melindungi otak dari stres oksidatif dan peradangan yang dapat menyebabkan penurunan kognitif seiring bertambahnya usia. Beberapa penelitian menunjukkan bahwa konsumsi blueberry secara rutin dapat meningkatkan fungsi kognitif, mempercepat pemrosesan informasi, dan mengurangi risiko penyakit neurodegeneratif seperti Alzheimer dan Parkinson.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan serat yang tinggi dalam berry juga sangat bermanfaat bagi kesehatan pencernaan. Serat membantu melancarkan buang air besar, mencegah sembelit, dan mendukung pertumbuhan bakteri baik dalam usus. Dengan menjaga kesehatan saluran pencernaan, berry dapat membantu mengurangi risiko gangguan pencernaan seperti sindrom iritasi usus (IBS) dan peradangan usus.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Berry juga dikenal sebagai buah yang sangat baik untuk menjaga kadar gula darah tetap stabil. Meskipun memiliki rasa manis, berry memiliki indeks glikemik yang rendah, sehingga tidak menyebabkan lonjakan gula darah yang drastis. Hal ini menjadikan berry sebagai pilihan yang baik untuk penderita diabetes atau mereka yang ingin mengontrol kadar gula darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, buah berry sangat bermanfaat bagi kesehatan kulit. Kandungan vitamin C dalam berry berperan dalam produksi kolagen, yang membantu menjaga elastisitas kulit dan mengurangi tanda-tanda penuaan seperti kerutan dan garis halus. Antioksidan dalam berry juga dapat melindungi kulit dari kerusakan akibat paparan sinar matahari dan polusi lingkungan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lain dari berry adalah kemampuannya dalam meningkatkan sistem kekebalan tubuh. Kandungan vitamin C, vitamin A, dan senyawa fitokimia dalam berry membantu meningkatkan respons imun tubuh, melawan infeksi, dan mempercepat proses penyembuhan luka. Dengan rutin mengonsumsi berry, tubuh menjadi lebih tahan terhadap penyakit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain kaya akan nutrisi, berry juga rendah kalori dan tinggi air, menjadikannya pilihan yang ideal bagi mereka yang menjalani program diet. Mengonsumsi berry dapat memberikan rasa kenyang lebih lama tanpa menambah banyak kalori, sehingga membantu dalam pengelolaan berat badan yang sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, buah berry merupakan salah satu pilihan terbaik untuk dikonsumsi secara rutin. Baik dikonsumsi langsung, dijadikan jus, smoothie, salad, atau campuran dalam makanan lainnya, berry memberikan nutrisi yang kaya untuk mendukung kesehatan tubuh secara menyeluruh.
+                        </p>                                             
+                                                
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="laut">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 20%;">>
+                    <div class="text-brokoli">
+                        <h1>Salmon</h1>
+                        <p>Hewan Laut</p>
+                        <button class="open-popup-btn" onclick="openPopup15()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup15" class="popup15" style="display: none;">
+                    <div class="popup-content15">
+                        <span class="close-btn15" onclick="closePopup15()">&times;</span>
+                        <div class="popup_highlight1-15"></div>
+                        <h2>Salmon</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan salmon adalah salah satu jenis ikan yang kaya akan nutrisi dan memiliki banyak manfaat bagi kesehatan. Salmon mengandung protein berkualitas tinggi, asam lemak omega-3, vitamin, dan mineral yang sangat penting untuk mendukung berbagai fungsi tubuh. Karena kandungan nutrisinya yang luar biasa, salmon sering dianggap sebagai salah satu makanan terbaik untuk menjaga kesehatan secara menyeluruh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama salmon adalah kandungan asam lemak omega-3 yang sangat tinggi. Omega-3 berperan penting dalam menjaga kesehatan jantung dengan membantu menurunkan kadar trigliserida, meningkatkan kadar kolesterol baik (HDL), serta mengurangi risiko penyakit jantung dan stroke. Konsumsi salmon secara teratur dapat membantu menjaga tekanan darah tetap stabil dan mendukung fungsi pembuluh darah yang sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain bermanfaat untuk kesehatan jantung, omega-3 dalam salmon juga sangat baik untuk otak. Nutrisi ini dapat membantu meningkatkan fungsi kognitif, memperbaiki daya ingat, dan mengurangi risiko gangguan neurodegeneratif seperti Alzheimer dan demensia. Omega-3 juga berperan dalam meningkatkan suasana hati dan mengurangi risiko depresi serta kecemasan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salmon juga kaya akan protein berkualitas tinggi yang sangat penting untuk pertumbuhan dan perbaikan jaringan tubuh. Protein membantu membangun otot, mempercepat proses penyembuhan luka, serta mendukung sistem kekebalan tubuh. Konsumsi protein yang cukup juga dapat membantu mengontrol nafsu makan dan menjaga berat badan yang sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan salmon mengandung berbagai vitamin dan mineral esensial, seperti vitamin D, vitamin B12, selenium, dan kalium. Vitamin D dalam salmon berperan penting dalam menjaga kesehatan tulang, meningkatkan sistem kekebalan tubuh, dan mendukung keseimbangan hormon. Sementara itu, vitamin B12 diperlukan untuk produksi sel darah merah dan menjaga fungsi saraf yang optimal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lain dari salmon adalah kemampuannya dalam menjaga kesehatan mata. Kandungan omega-3, vitamin A, dan antioksidan dalam salmon membantu melindungi mata dari degenerasi makula yang terkait dengan usia serta mengurangi risiko sindrom mata kering. Konsumsi salmon secara rutin dapat membantu menjaga ketajaman penglihatan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, salmon juga memiliki efek positif pada kesehatan kulit. Kandungan omega-3 dan antioksidan dalam ikan ini membantu menjaga kelembapan kulit, mengurangi peradangan, serta melindungi kulit dari kerusakan akibat sinar UV dan penuaan dini. Nutrisi dalam salmon juga berperan dalam meningkatkan produksi kolagen yang membuat kulit tetap elastis dan sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salmon juga sangat baik untuk kesehatan sendi. Kandungan omega-3 dan selenium dalam salmon memiliki sifat antiinflamasi yang dapat membantu mengurangi nyeri sendi serta mencegah penyakit peradangan seperti arthritis. Konsumsi salmon secara rutin dapat membantu menjaga kelenturan sendi dan mengurangi risiko gangguan muskuloskeletal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Untuk ibu hamil, salmon merupakan sumber nutrisi yang sangat baik. Kandungan DHA dalam salmon berperan penting dalam perkembangan otak dan sistem saraf janin. Omega-3 juga membantu mencegah kelahiran prematur dan mendukung perkembangan visual bayi. Dengan mengonsumsi salmon dalam jumlah yang cukup, ibu hamil dapat memastikan bahwa janin mendapatkan nutrisi yang dibutuhkan untuk tumbuh dengan sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan salmon juga rendah merkuri dibandingkan dengan beberapa jenis ikan laut lainnya, sehingga lebih aman untuk dikonsumsi secara rutin. Namun, untuk mendapatkan manfaat maksimal, disarankan untuk memilih salmon segar atau salmon liar yang memiliki kandungan nutrisi lebih tinggi dibandingkan dengan salmon yang dibudidayakan secara intensif.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, salmon merupakan pilihan makanan yang sangat baik untuk dikonsumsi dalam pola makan sehat. Salmon dapat disajikan dalam berbagai hidangan, seperti panggang, sup, salad, atau sushi, sehingga memberikan fleksibilitas dalam memasaknya tanpa mengurangi kandungan gizinya. Menjadikan salmon sebagai bagian dari menu harian dapat membantu menjaga kesehatan tubuh secara optimal.
+                        </p>                                                                                          
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;">>
+                    <div class="text-brokoli">
+                        <h1>Makarel</h1>
+                        <p>Hewan Laut</p>
+                        <button class="open-popup-btn" onclick="openPopup16()" ><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup16" class="popup16" style="display: none;">
+                    <div class="popup-content16">
+                        <span class="close-btn16" onclick="closePopup16()">&times;</span>
+                        <div class="popup_highlight1-16"></div>
+                        <h2>Makarel</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan makarel adalah salah satu jenis ikan laut yang kaya akan nutrisi dan memiliki berbagai manfaat bagi kesehatan. Makarel mengandung protein berkualitas tinggi, asam lemak omega-3, serta berbagai vitamin dan mineral yang penting bagi tubuh. Karena kandungan gizinya yang melimpah, ikan makarel sering dianjurkan sebagai bagian dari pola makan sehat untuk menjaga kesehatan jantung, otak, dan tubuh secara keseluruhan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama dari ikan makarel adalah kandungan asam lemak omega-3 yang tinggi. Omega-3 berperan penting dalam menjaga kesehatan jantung dengan membantu menurunkan kadar kolesterol jahat (LDL) dan meningkatkan kadar kolesterol baik (HDL). Selain itu, omega-3 juga membantu menurunkan tekanan darah, mengurangi peradangan pada pembuluh darah, dan mencegah risiko penyakit jantung serta stroke.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan makarel juga sangat bermanfaat bagi kesehatan otak. Kandungan omega-3 dalam ikan ini berkontribusi dalam meningkatkan fungsi kognitif, memperbaiki daya ingat, serta mengurangi risiko penyakit neurodegeneratif seperti Alzheimer dan demensia. Selain itu, omega-3 juga dapat membantu mengurangi risiko depresi dan meningkatkan suasana hati secara keseluruhan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain kaya akan omega-3, ikan makarel juga merupakan sumber protein yang sangat baik. Protein sangat penting untuk pertumbuhan dan perbaikan jaringan tubuh, termasuk otot, kulit, dan organ-organ lainnya. Konsumsi ikan makarel secara rutin dapat membantu meningkatkan massa otot, mempercepat proses penyembuhan luka, serta mendukung sistem kekebalan tubuh yang optimal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Makarel juga mengandung berbagai vitamin dan mineral penting, seperti vitamin D, vitamin B12, selenium, dan fosfor. Vitamin D berperan dalam menjaga kesehatan tulang dan meningkatkan sistem kekebalan tubuh. Vitamin B12 sangat penting untuk produksi sel darah merah dan fungsi saraf yang sehat, sementara selenium dan fosfor membantu melindungi sel dari kerusakan akibat radikal bebas serta menjaga kesehatan tulang dan gigi.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan makarel juga memiliki manfaat bagi kesehatan mata. Kandungan omega-3, vitamin A, dan antioksidan dalam ikan ini dapat membantu menjaga ketajaman penglihatan, mengurangi risiko degenerasi makula akibat penuaan, serta mengurangi risiko sindrom mata kering. Konsumsi makarel secara rutin dapat membantu menjaga kesehatan mata dalam jangka panjang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, ikan makarel juga berperan dalam menjaga kesehatan kulit. Omega-3 dalam ikan ini membantu mengurangi peradangan kulit, menjaga kelembapan alami kulit, serta melindungi kulit dari efek buruk sinar UV dan penuaan dini. Nutrisi dalam makarel juga dapat meningkatkan produksi kolagen, yang berperan dalam menjaga elastisitas dan kekencangan kulit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Konsumsi ikan makarel juga baik untuk kesehatan sendi. Kandungan omega-3 dan selenium dalam ikan ini memiliki sifat antiinflamasi yang dapat membantu mengurangi nyeri sendi serta mencegah penyakit peradangan seperti arthritis. Mengonsumsi ikan ini secara rutin dapat membantu menjaga fleksibilitas sendi dan mengurangi risiko gangguan muskuloskeletal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Untuk ibu hamil, ikan makarel merupakan sumber nutrisi yang sangat baik. Kandungan DHA dalam makarel berperan penting dalam perkembangan otak dan sistem saraf janin. Omega-3 juga membantu mencegah kelahiran prematur dan mendukung perkembangan visual bayi. Namun, ibu hamil disarankan untuk mengonsumsi makarel dalam jumlah yang wajar untuk menghindari potensi paparan merkuri yang mungkin terdapat dalam ikan laut.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, ikan makarel rendah kalori dan kaya akan protein, menjadikannya pilihan yang ideal bagi mereka yang ingin menjaga berat badan yang sehat. Kandungan proteinnya yang tinggi membantu meningkatkan rasa kenyang lebih lama, sehingga dapat mengurangi keinginan untuk mengonsumsi makanan berlebihan dan membantu dalam program diet sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, ikan makarel merupakan pilihan makanan yang sangat baik untuk dimasukkan dalam pola makan sehari-hari. Makarel dapat disajikan dalam berbagai hidangan, seperti dipanggang, dikukus, atau dibuat menjadi sup, sehingga memberikan fleksibilitas dalam memasaknya tanpa mengurangi kandungan nutrisinya. Menjadikan makarel sebagai bagian dari menu harian dapat membantu menjaga kesehatan tubuh secara menyeluruh.
+                        </p>                                                                                                           
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;">>
+                    <div class="text-brokoli">
+                        <h1>Tuna</h1>
+                        <p>Hewan Laut</p>
+                        <button class="open-popup-btn" onclick="openPopup17()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup17" class="popup17" style="display: none;">
+                    <div class="popup-content17">
+                        <span class="close-btn17" onclick="closePopup17()">&times;</span>
+                        <div class="popup_highlight1-17"></div>
+                        <h2>Tuna</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan tuna adalah salah satu jenis ikan laut yang sangat populer dan dikenal memiliki kandungan nutrisi yang luar biasa. Tuna kaya akan protein berkualitas tinggi, asam lemak omega-3, serta berbagai vitamin dan mineral yang penting bagi kesehatan tubuh. Konsumsi ikan tuna secara rutin dapat membantu menjaga kesehatan jantung, otak, serta sistem kekebalan tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama ikan tuna adalah kandungan asam lemak omega-3 yang tinggi. Omega-3 berperan penting dalam menjaga kesehatan jantung dengan mengurangi kadar kolesterol jahat (LDL), meningkatkan kadar kolesterol baik (HDL), serta membantu mengontrol tekanan darah. Konsumsi ikan tuna secara teratur dapat mengurangi risiko penyakit jantung, stroke, serta peradangan pada pembuluh darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain baik untuk kesehatan jantung, ikan tuna juga memiliki manfaat besar bagi kesehatan otak. Kandungan DHA dalam omega-3 membantu meningkatkan fungsi kognitif, memperbaiki daya ingat, serta mencegah penyakit neurodegeneratif seperti Alzheimer dan demensia. Omega-3 juga berperan dalam meningkatkan suasana hati dan mengurangi risiko depresi serta gangguan kecemasan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan tuna merupakan sumber protein yang sangat baik, yang berperan penting dalam pertumbuhan dan perbaikan jaringan tubuh. Protein dalam ikan tuna membantu pembentukan otot, mempercepat penyembuhan luka, serta mendukung sistem kekebalan tubuh yang lebih kuat. Bagi mereka yang sedang menjalani program diet atau membangun massa otot, ikan tuna menjadi pilihan yang sangat baik karena tinggi protein namun rendah lemak.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, ikan tuna kaya akan vitamin dan mineral penting seperti vitamin D, vitamin B12, selenium, dan zat besi. Vitamin D sangat penting untuk kesehatan tulang dan membantu tubuh menyerap kalsium dengan lebih baik. Vitamin B12 berperan dalam produksi sel darah merah serta menjaga kesehatan sistem saraf. Selenium dalam ikan tuna bertindak sebagai antioksidan yang melindungi sel dari kerusakan akibat radikal bebas, sementara zat besi membantu mencegah anemia dengan mendukung produksi hemoglobin dalam darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan tuna juga memiliki manfaat bagi kesehatan mata. Kandungan omega-3 serta vitamin A dalam ikan ini dapat membantu mengurangi risiko degenerasi makula akibat penuaan, menjaga ketajaman penglihatan, serta mengurangi risiko mata kering. Konsumsi tuna secara rutin dapat membantu menjaga kesehatan mata dalam jangka panjang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bagi mereka yang ingin menjaga berat badan, ikan tuna adalah pilihan makanan yang sangat baik. Dengan kandungan protein yang tinggi dan rendah kalori, ikan tuna dapat membantu meningkatkan rasa kenyang lebih lama, mengurangi keinginan untuk mengonsumsi makanan berlebih, serta membantu dalam program diet sehat. Tuna juga rendah karbohidrat, sehingga cocok untuk diet rendah karbohidrat atau keto.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain manfaat kesehatan, ikan tuna juga baik untuk menjaga kesehatan kulit. Kandungan omega-3 dalam ikan ini membantu mengurangi peradangan pada kulit, menjaga kelembapan alami kulit, serta mengurangi tanda-tanda penuaan dini. Vitamin E dan selenium dalam tuna juga membantu melindungi kulit dari efek buruk sinar matahari dan radikal bebas.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Ikan tuna juga bermanfaat bagi ibu hamil karena kandungan DHA yang tinggi, yang berperan dalam perkembangan otak dan sistem saraf janin. Selain itu, omega-3 juga membantu mencegah kelahiran prematur dan mendukung perkembangan penglihatan bayi. Namun, ibu hamil perlu memperhatikan jumlah konsumsi tuna agar tidak terkena paparan merkuri berlebih yang dapat ditemukan dalam beberapa jenis ikan laut.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, ikan tuna merupakan pilihan makanan yang sangat baik untuk dikonsumsi secara rutin. Tuna bisa diolah dalam berbagai cara, seperti dipanggang, dikukus, atau dibuat menjadi salad dan sushi. Dengan memasukkan ikan tuna ke dalam pola makan sehari-hari, Anda dapat menikmati manfaat luar biasa bagi kesehatan tubuh secara keseluruhan.
+                        </p>
+                                                                                                                                   
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 35%;">>
+                    <div class="text-brokoli">
+                        <h1>Udang </h1>
+                        <p>Hewan Laut</p>
+                        <button class="open-popup-btn" onclick="openPopup18()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup18" class="popup18" style="display: none;">
+                    <div class="popup-content18">
+                        <span class="close-btn18" onclick="closePopup18()">&times;</span>
+                        <div class="popup_highlight1-18"></div>
+                        <h2>Udang</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Udang adalah salah satu jenis seafood yang populer karena rasanya yang lezat serta kandungan nutrisinya yang melimpah. Udang kaya akan protein, rendah kalori, serta mengandung berbagai vitamin dan mineral penting yang bermanfaat bagi kesehatan tubuh. Dengan mengonsumsi udang secara rutin dalam jumlah yang wajar, Anda dapat memperoleh berbagai manfaat kesehatan yang luar biasa.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama udang adalah kandungan protein berkualitas tingginya. Protein dalam udang membantu dalam pembentukan dan perbaikan jaringan tubuh, menjaga massa otot, serta meningkatkan daya tahan tubuh. Bagi mereka yang sedang menjalani program diet atau ingin membangun otot, udang adalah pilihan makanan yang sangat baik karena rendah lemak tetapi tetap tinggi protein.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain protein, udang juga kaya akan asam lemak omega-3 yang sangat bermanfaat bagi kesehatan jantung. Omega-3 membantu mengurangi kadar kolesterol jahat (LDL), meningkatkan kolesterol baik (HDL), serta mengurangi risiko penyakit kardiovaskular seperti serangan jantung dan stroke. Kandungan ini juga berperan dalam mengurangi peradangan dan menjaga tekanan darah tetap stabil.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Udang juga mengandung berbagai vitamin dan mineral penting seperti vitamin B12, zat besi, fosfor, selenium, dan antioksidan astaxanthin. Vitamin B12 sangat penting untuk menjaga kesehatan saraf dan membantu produksi sel darah merah, sehingga dapat mencegah anemia. Zat besi dalam udang juga berperan dalam transportasi oksigen dalam darah dan meningkatkan energi tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan selenium dalam udang berfungsi sebagai antioksidan yang membantu melindungi tubuh dari stres oksidatif serta meningkatkan daya tahan tubuh. Selenium juga berperan dalam menjaga kesehatan tiroid, yang berpengaruh pada metabolisme tubuh secara keseluruhan. Fosfor dalam udang membantu menjaga kesehatan tulang dan gigi, menjadikannya penting untuk pertumbuhan serta pencegahan osteoporosis.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, udang mengandung antioksidan astaxanthin yang memberi warna merah pada tubuhnya. Astaxanthin dikenal memiliki sifat antiinflamasi yang kuat dan dapat membantu menjaga kesehatan kulit, memperlambat penuaan, serta melindungi kulit dari paparan sinar UV. Antioksidan ini juga berperan dalam meningkatkan kesehatan otak dan mengurangi risiko penyakit neurodegeneratif seperti Alzheimer.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Bagi mereka yang ingin menjaga berat badan, udang bisa menjadi pilihan makanan yang ideal. Dengan kandungan kalori yang rendah dan tinggi protein, udang dapat membantu meningkatkan rasa kenyang lebih lama tanpa menambah lemak berlebih. Ini membuat udang cocok dikonsumsi bagi mereka yang menjalani diet sehat atau ingin mengontrol asupan kalori harian.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Udang juga memiliki manfaat bagi kesehatan otak. Kandungan omega-3 serta vitamin B12 dalam udang membantu meningkatkan fungsi kognitif, memperbaiki daya ingat, serta mengurangi risiko gangguan mental seperti depresi dan kecemasan. Dengan mengonsumsi udang secara rutin, kesehatan otak dapat tetap terjaga dalam jangka panjang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, udang bermanfaat bagi ibu hamil karena mengandung nutrisi penting seperti folat dan asam lemak omega-3 yang berperan dalam perkembangan otak dan sistem saraf janin. Namun, ibu hamil perlu memastikan udang yang dikonsumsi telah dimasak dengan baik untuk menghindari risiko infeksi dari bakteri atau parasit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, udang merupakan pilihan makanan yang lezat dan bernutrisi tinggi. Udang dapat diolah dalam berbagai masakan, seperti direbus, dikukus, dipanggang, atau ditumis sesuai selera. Namun, perlu diingat bahwa beberapa orang mungkin memiliki alergi terhadap udang, sehingga penting untuk memastikan bahwa konsumsi udang tidak menimbulkan reaksi alergi.
+                        </p>                        
+                                                                                                                                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="biji">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 20%;">>
+                    <div class="text-brokoli">
+                        <h1>Quinoa</h1>
+                        <p>Biji-Bijian</p>
+                        <button class="open-popup-btn" onclick="openPopup20()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup20" class="popup20" style="display: none;">
+                    <div class="popup-content20">
+                        <span class="close-btn20" onclick="closePopup20()">&times;</span>
+                        <div class="popup_highlight1-20"></div>
+                        <h2>Quinoa</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Quinoa adalah salah satu superfood yang kaya akan nutrisi dan menawarkan berbagai manfaat kesehatan. Sebagai sumber protein nabati yang lengkap, quinoa mengandung sembilan asam amino esensial yang sangat penting untuk pertumbuhan dan perbaikan sel tubuh. Kandungan proteinnya yang tinggi menjadikannya pilihan ideal bagi vegetarian dan vegan yang mencari alternatif protein berkualitas tinggi.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain kaya protein, quinoa juga merupakan sumber serat yang sangat baik. Serat dalam quinoa membantu memperlancar pencernaan, mencegah sembelit, dan meningkatkan kesehatan usus. Serat ini juga berperan dalam mengontrol kadar gula darah dan menjaga rasa kenyang lebih lama, yang sangat bermanfaat bagi mereka yang menjalani program diet atau ingin mengontrol berat badan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Quinoa juga memiliki kandungan karbohidrat kompleks yang memberikan energi secara bertahap, sehingga dapat membantu menjaga stamina dan daya tahan tubuh. Indeks glikemik yang rendah pada quinoa membuatnya aman dikonsumsi oleh penderita diabetes karena tidak menyebabkan lonjakan gula darah yang drastis.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu keunggulan quinoa adalah kandungan antioksidannya yang tinggi. Quinoa mengandung flavonoid seperti quercetin dan kaempferol yang memiliki sifat antiinflamasi dan dapat membantu melawan radikal bebas dalam tubuh. Antioksidan ini berperan dalam memperlambat penuaan, mengurangi risiko penyakit kronis, serta meningkatkan sistem kekebalan tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan vitamin dan mineral dalam quinoa juga sangat mengesankan. Quinoa kaya akan magnesium yang penting untuk kesehatan jantung dan fungsi otot. Zat besi dalam quinoa membantu meningkatkan produksi sel darah merah, mencegah anemia, dan menjaga energi tubuh tetap optimal. Selain itu, kandungan fosfor, mangan, dan seng dalam quinoa berperan dalam menjaga kesehatan tulang, meningkatkan metabolisme, serta mendukung fungsi otak.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Quinoa juga merupakan sumber vitamin B yang baik, termasuk folat yang sangat penting bagi ibu hamil untuk perkembangan janin yang sehat. Konsumsi quinoa secara teratur dapat membantu mencegah cacat lahir dan mendukung pertumbuhan sistem saraf bayi dalam kandungan.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Keunggulan lain dari quinoa adalah sifatnya yang bebas gluten, sehingga sangat cocok untuk orang dengan intoleransi gluten atau penyakit celiac. Sebagai pengganti biji-bijian yang mengandung gluten, quinoa dapat digunakan dalam berbagai resep seperti salad, bubur, atau sebagai alternatif nasi yang lebih sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain manfaat kesehatan, quinoa juga sangat mudah diolah. Quinoa memiliki rasa yang ringan dan tekstur yang lembut, sehingga dapat dipadukan dengan berbagai jenis makanan. Quinoa dapat direbus, ditumis, atau dipanggang untuk menambah variasi dalam menu harian.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, quinoa adalah pilihan makanan yang sangat bernutrisi dan baik untuk kesehatan secara keseluruhan. Mengonsumsinya secara rutin dapat membantu menjaga keseimbangan gizi, meningkatkan energi, serta mendukung kesehatan jantung, otak, dan sistem pencernaan.
+                        </p>                                                                       
+                                                                                                                                   
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;">>
+                    <div class="text-brokoli">
+                        <h1>Kurma</h1>
+                        <p>Biji-Bijian</p>
+                        <button class="open-popup-btn" onclick="openPopup21()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup21" class="popup21" style="display: none;">
+                    <div class="popup-content21">
+                        <span class="close-btn21" onclick="closePopup21()">&times;</span>
+                        <div class="popup_highlight1-21"></div>
+                        <h2>Kurma</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kurma adalah buah yang kaya akan nutrisi dan memiliki berbagai manfaat kesehatan. Buah ini mengandung karbohidrat alami yang tinggi, menjadikannya sumber energi yang cepat dan efisien. Gula alami dalam kurma, seperti glukosa dan fruktosa, dapat membantu mengembalikan energi dengan cepat setelah aktivitas fisik atau saat berbuka puasa.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain kaya energi, kurma juga merupakan sumber serat yang sangat baik. Serat dalam kurma membantu melancarkan pencernaan, mencegah sembelit, serta menjaga kesehatan usus. Konsumsi kurma secara rutin dapat membantu meningkatkan kesehatan saluran pencernaan dan mencegah gangguan seperti sindrom iritasi usus.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kurma juga mengandung berbagai vitamin dan mineral penting bagi tubuh. Buah ini kaya akan kalium, mineral yang berperan dalam menjaga keseimbangan cairan, mengontrol tekanan darah, serta mendukung fungsi otot dan saraf. Selain itu, kandungan magnesium dalam kurma membantu menjaga kesehatan tulang dan mencegah osteoporosis.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama kurma adalah sebagai sumber antioksidan yang kuat. Kurma mengandung flavonoid, karotenoid, dan asam fenolat yang berperan dalam melawan radikal bebas dan mengurangi risiko penyakit kronis seperti kanker dan penyakit jantung. Antioksidan ini juga dapat membantu memperlambat proses penuaan dan menjaga kesehatan kulit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kurma juga bermanfaat untuk meningkatkan fungsi otak. Kandungan flavonoid dan senyawa antiinflamasi dalam kurma dapat membantu mengurangi peradangan di otak, meningkatkan daya ingat, serta menurunkan risiko penyakit neurodegeneratif seperti Alzheimer.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, kurma memiliki indeks glikemik yang relatif rendah, sehingga aman dikonsumsi dalam jumlah yang wajar oleh penderita diabetes. Kandungan seratnya membantu memperlambat penyerapan gula dalam darah, sehingga dapat membantu menjaga kadar gula darah tetap stabil.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kurma juga dikenal memiliki manfaat bagi kesehatan jantung. Kandungan serat, kalium, dan antioksidan dalam kurma berperan dalam menurunkan kadar kolesterol jahat (LDL), meningkatkan kesehatan pembuluh darah, serta mengurangi risiko penyakit jantung dan stroke.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Manfaat lain dari kurma adalah perannya dalam meningkatkan kesuburan, baik pada pria maupun wanita. Kandungan zat besi dan asam folat dalam kurma membantu meningkatkan produksi sel darah merah, yang berperan dalam meningkatkan kesuburan dan mendukung kesehatan ibu hamil.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kurma juga sering digunakan sebagai makanan alami untuk meningkatkan daya tahan tubuh. Kandungan vitamin C dan antioksidan dalam kurma membantu memperkuat sistem kekebalan tubuh, sehingga tubuh lebih tahan terhadap infeksi dan penyakit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, kurma adalah pilihan makanan sehat yang dapat dikonsumsi sehari-hari. Buah ini dapat dimakan langsung, dicampurkan dalam smoothie, atau digunakan sebagai pemanis alami dalam berbagai hidangan. Konsumsi kurma secara rutin dapat membantu menjaga kesehatan secara keseluruhan, mulai dari pencernaan, jantung, otak, hingga sistem kekebalan tubuh.
+                        </p>                                                                                              
+                                                                                                                                   
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;">>
+                    <div class="text-brokoli">
+                        <h1>Kismis</h1>
+                        <p>Biji-Bijian</p>
+                        <button class="open-popup-btn" onclick="openPopup22()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup22" class="popup22" style="display: none;">
+                    <div class="popup-content22">
+                        <span class="close-btn22" onclick="closePopup22()">&times;</span>
+                        <div class="popup_highlight1-22"></div>
+                        <h2>Kismis</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kismis adalah buah anggur yang dikeringkan dan kaya akan nutrisi penting yang memberikan berbagai manfaat bagi kesehatan tubuh. Meskipun ukurannya kecil, kismis mengandung sejumlah besar vitamin, mineral, dan antioksidan yang dapat mendukung kesehatan secara keseluruhan. Salah satu manfaat utama kismis adalah sebagai sumber energi alami karena kandungan karbohidratnya yang tinggi, terutama dalam bentuk glukosa dan fruktosa, yang dapat memberikan dorongan energi instan bagi tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kismis juga kaya akan serat makanan, yang berperan penting dalam menjaga kesehatan pencernaan. Konsumsi kismis secara rutin dapat membantu mencegah sembelit, meningkatkan pergerakan usus, dan mendukung pertumbuhan bakteri baik dalam saluran pencernaan. Serat dalam kismis juga membantu mengatur kadar gula darah dengan memperlambat penyerapan gula ke dalam aliran darah, menjadikannya pilihan camilan sehat bagi penderita diabetes.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu keunggulan utama kismis adalah kandungan antioksidannya yang tinggi, termasuk polifenol, flavonoid, dan tanin. Senyawa ini berperan dalam melawan radikal bebas yang dapat merusak sel-sel tubuh, mengurangi peradangan, dan menurunkan risiko penyakit kronis seperti kanker dan penyakit jantung. Selain itu, kandungan resveratrol dalam kismis memiliki efek antiinflamasi yang dapat membantu menjaga kesehatan jantung dan pembuluh darah.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kismis juga kaya akan zat besi dan tembaga, dua mineral yang berperan dalam produksi sel darah merah dan mencegah anemia. Mengonsumsi kismis secara teratur dapat membantu meningkatkan kadar hemoglobin dalam darah, mengurangi risiko kelelahan, serta meningkatkan daya tahan tubuh. Selain itu, kandungan kalium dalam kismis membantu menjaga keseimbangan elektrolit dan tekanan darah tetap stabil, sehingga baik untuk kesehatan jantung.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan kalsium dan boron dalam kismis juga berperan dalam menjaga kesehatan tulang. Boron membantu tubuh dalam penyerapan kalsium dan pembentukan tulang yang kuat, yang dapat mengurangi risiko osteoporosis dan masalah tulang lainnya, terutama pada wanita yang telah memasuki masa menopause. Oleh karena itu, kismis merupakan makanan yang baik untuk menjaga kepadatan tulang dan kesehatan sendi.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain baik untuk kesehatan tubuh secara keseluruhan, kismis juga memiliki manfaat bagi kesehatan mulut. Meskipun manis, kismis mengandung senyawa fitokimia yang dapat membantu mencegah pertumbuhan bakteri penyebab plak gigi dan penyakit gusi. Kandungan asam oleanolat dalam kismis dapat membantu melindungi gigi dari kerusakan dan mengurangi risiko gigi berlubang.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kismis juga dikenal memiliki manfaat untuk meningkatkan fungsi otak dan daya ingat. Kandungan antioksidan dan nutrisi dalam kismis dapat membantu melindungi sel-sel otak dari stres oksidatif, mengurangi risiko gangguan kognitif, serta meningkatkan fokus dan konsentrasi. Oleh karena itu, kismis bisa menjadi camilan sehat bagi pelajar dan pekerja yang membutuhkan energi tambahan dan ketajaman mental.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, kismis adalah pilihan camilan sehat yang dapat dikonsumsi sehari-hari. Kismis dapat dimakan langsung, dicampurkan dalam sereal, salad, atau digunakan sebagai pemanis alami dalam berbagai hidangan. Mengonsumsi kismis dalam jumlah yang wajar dapat membantu menjaga kesehatan tubuh secara menyeluruh, mulai dari pencernaan, jantung, tulang, hingga otak.
+                        </p>                                                                                                                                                                                                                             
+                    </div>
+                </div>
+
+                <div class="card" style="animation: fadeInUp linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 35%;">>
+                    <div class="text-brokoli">
+                        <h1>Prune </h1>
+                        <p>Biji-Bijian</p>
+                        <button class="open-popup-btn" onclick="openPopup23()"><img src="../images/right.svg"></button>
+                    </div>
+                    <div class="brokoliimage">
+                    </div>
+                </div>
+                <div id="popup23" class="popup23" style="display: none;">
+                    <div class="popup-content23">
+                        <span class="close-btn23" onclick="closePopup23()">&times;</span>
+                        <div class="popup_highlight1-23"></div>
+                        <h2>Prune</h2>
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Prune adalah buah plum yang telah dikeringkan dan dikenal kaya akan nutrisi yang memberikan berbagai manfaat bagi kesehatan. Salah satu manfaat utama prune adalah kandungan seratnya yang tinggi, terutama serat tidak larut, yang berperan penting dalam menjaga kesehatan pencernaan. Serat ini membantu melancarkan pergerakan usus, mencegah sembelit, dan meningkatkan pertumbuhan bakteri baik dalam saluran pencernaan, sehingga sistem pencernaan tetap sehat.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain itu, prune mengandung sorbitol, sejenis gula alkohol alami yang memiliki efek pencahar ringan. Hal ini menjadikan prune sebagai solusi alami untuk masalah pencernaan, terutama bagi mereka yang mengalami sembelit kronis. Mengonsumsi prune secara teratur dapat membantu menjaga kesehatan usus dan mengurangi risiko gangguan pencernaan seperti sindrom iritasi usus.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Prune juga kaya akan antioksidan, terutama polifenol, yang berperan dalam melawan radikal bebas dan mengurangi peradangan dalam tubuh. Antioksidan ini membantu melindungi sel-sel tubuh dari kerusakan, memperlambat proses penuaan, serta mengurangi risiko penyakit kronis seperti kanker dan penyakit jantung. Kandungan vitamin C dalam prune juga berperan dalam meningkatkan daya tahan tubuh dan menjaga kesehatan kulit.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Salah satu manfaat utama prune adalah kemampuannya dalam menjaga kesehatan tulang. Prune mengandung berbagai mineral penting seperti kalsium, magnesium, fosfor, dan boron yang mendukung kepadatan tulang dan mencegah osteoporosis. Penelitian menunjukkan bahwa mengonsumsi prune secara rutin dapat membantu meningkatkan massa tulang dan mengurangi risiko kerapuhan tulang, terutama pada wanita yang telah memasuki masa menopause.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Prune juga dapat membantu mengatur kadar gula darah. Meskipun memiliki rasa manis alami, prune memiliki indeks glikemik yang rendah, sehingga tidak menyebabkan lonjakan gula darah yang drastis. Serat dalam prune membantu memperlambat penyerapan glukosa ke dalam darah, menjadikannya pilihan yang baik bagi penderita diabetes atau mereka yang ingin menjaga kadar gula darah tetap stabil.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Kandungan kalium dalam prune juga memberikan manfaat besar bagi kesehatan jantung. Kalium adalah mineral penting yang berperan dalam mengatur tekanan darah, menjaga keseimbangan cairan dalam tubuh, serta mengurangi risiko hipertensi dan penyakit kardiovaskular. Selain itu, prune mengandung zat besi yang membantu mencegah anemia dengan meningkatkan produksi sel darah merah dan oksigenasi dalam tubuh.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Selain baik untuk kesehatan organ dalam, prune juga memiliki manfaat untuk menjaga kesehatan kulit. Kandungan vitamin C, vitamin K, dan antioksidan dalam prune membantu melindungi kulit dari kerusakan akibat paparan sinar matahari dan polusi. Antioksidan ini juga berperan dalam memperlambat tanda-tanda penuaan dini seperti keriput dan garis halus.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Mengonsumsi prune juga dapat membantu meningkatkan energi dan mengurangi kelelahan. Kandungan karbohidrat alami dalam prune memberikan dorongan energi yang bertahan lama, menjadikannya camilan sehat yang cocok dikonsumsi sebelum atau sesudah berolahraga. Selain itu, kandungan vitamin B dalam prune mendukung metabolisme energi dan fungsi otak yang optimal.
+                        </p>
+                        
+                        <p style="text-align: justify; line-height: 1.8; font-size: 16px;">
+                            Dengan berbagai manfaatnya, prune dapat menjadi tambahan yang baik dalam pola makan sehat. Prune dapat dikonsumsi langsung sebagai camilan, dicampurkan dalam sereal, yogurt, salad, atau digunakan sebagai bahan dalam pembuatan kue dan makanan sehat lainnya. Mengonsumsi prune dalam jumlah yang wajar dapat memberikan banyak manfaat bagi kesehatan tubuh secara keseluruhan, mulai dari pencernaan, kesehatan tulang, jantung, hingga kulit.
+                        </p>                                                                                                                                                                                                                                                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qna">
+        <div class="container-5">
+            <div class="title">Frequently Asked Questions</div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-1">
+                <label for="acc-1">
+                    <h3>Apa Saja Makanan yang Baik untuk Kesehatan Tubuh?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Makanan sehat meliputi sayuran hijau, buah-buahan, protein tanpa lemak (seperti ikan dan ayam), kacang-kacangan, serta makanan yang kaya serat seperti oatmeal dan gandum utuh.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-2">
+                <label for="acc-2">
+                    <h3>Berapa Banyak Air yang Harus Kita Minum Setiap Hari?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Secara umum, orang dewasa dianjurkan minum sekitar 2-3 liter air per hari atau 8-10 gelas, tergantung pada aktivitas dan kondisi tubuh.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-3">
+                <label for="acc-3">
+                    <h3>Apa Manfaat Mengonsumsi Sayur dan Buah Secara Rutin?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Sayur dan buah mengandung serat, vitamin, dan antioksidan yang membantu meningkatkan sistem imun, melancarkan pencernaan, serta mengurangi risiko penyakit kronis seperti diabetes dan penyakit jantung.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-4">
+                <label for="acc-4">
+                    <h3>Bagaimana Cara Menjaga Pola Makan Seimbang?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Pola makan seimbang mencakup karbohidrat (50%), protein (20-25%), lemak sehat (15-20%), serta konsumsi cukup serat, vitamin, dan mineral dari sayur dan buah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img class="background-olahraga" src="../Images/background-olahraga.svg" alt="">
+
+    <h1 class="last-title">Mulai <span style="color: #30B0C7; font-family: 'Poppins-Medium';">Hidup Sehat</span> Dari Sekarang Demi Masa Depan</h1>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-top">
+                <div class="logo-footer"></div>
+                <p class="desk-footer">Menjaga Kesehatan Indonesia</p>
+
+                <div class="button-container">
+                    <button type="button" class="button">Masuk</button>
+                    <button type="button" class="button">Daftar</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© FitSmart 2025. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="konsumsi.html">Konsumsi</a>
+                    <a href="penyakit.html">Penyakit</a>
+                    <a href="aktifitas.html">Aktifitas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
+
+

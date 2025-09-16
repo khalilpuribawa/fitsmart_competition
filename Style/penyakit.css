@@ -1,0 +1,3009 @@
+@font-face 
+{
+  font-family: 'Poppins-Light';
+  src: url('../Font/Poppins-Light.ttf');
+}
+@font-face 
+{
+  font-family: 'Poppins';
+  src: url('../Font/Poppins-Regular.ttf');
+}
+@font-face 
+{
+  font-family: 'Poppins-Medium';
+  src: url('../Font/Poppins-Medium.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #f0f9fa;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 110px 0 110px;
+}
+
+.logo {
+    width: 31px;
+    height: 50px;
+    background-image: url(../Images/logo.svg);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 0 3px;
+}
+
+.toggle-btn {
+    display: none;
+}
+
+.btn-masuk {
+    color: #30B0C7;
+    border: 1px solid #30B0C7;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-masuk:hover {
+    color: white;
+    background-color: #30B0C7;
+}
+
+.btn-daftar {
+    color: white;
+    background-color: #30B0C7;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-daftar:hover {
+    background-color: #2480aa;
+}
+
+.floating-button {
+    font-family: 'Poppins-Medium';
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    font-size: 17px;
+    bottom: 80px;
+    right: 110px;
+    background-color: #30B0C7;
+    border: 0.5px solid black;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px black;
+    transition: 0.3s;
+    z-index: 100;
+    animation: fadeInUp 1.4s ease-in-out forwards;
+}
+.floating-button:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+    margin-bottom: -4px;
+    margin-right: -4px;
+}
+.chatBot {
+    display: none;
+    position: fixed;
+    width: 260px;
+    height: 300px;
+    bottom: 150px;
+    right: 15px;
+    border: 1px solid #2480aa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 80;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.chatBot.show {
+    display: block;
+    animation: fadeInScale 0.4s ease forwards;
+}
+
+.chatBot.hide {
+    animation: fadeOutScale 0.4s ease forwards;
+}
+header {
+    background: #30B0C7;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.chatbox {
+    height: 450px;
+    overflow-y: auto;
+    padding: 5px 0;
+}
+.chat-outgoing {
+    background: #dcfaffbd;
+    width: auto;
+    height: auto;
+    padding: 4px 20px;
+    font-size: 14px;
+    margin: 10px 12px;
+    border-radius: 20px;
+    text-align: justify;
+}
+.chat-outgoing::marker {
+    color: white;
+}
+
+.chat-incoming {
+    background: #dcf2ffbd;
+    width: auto;
+    height: auto;
+    padding: 4px 20px;
+    font-size: 14px;
+    margin: 10px 12px;
+    border-radius: 20px;
+    text-align: justify;
+}
+.chat-incoming::marker {
+    color: white;
+}
+
+.chat-input {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 258px;
+    height: 55px;
+    background: #30B0C7;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+textarea {
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+}
+.button-ai {
+    width: 50%;
+    background: #2480aa;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-ai:hover {
+    background: #2480aa;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 110px;
+    background: url('../Images/background-hero.svg');
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -4.9rem;
+}
+
+.hero-content {
+    width: 70%;
+    height: 100%;
+    margin-top: 30rem;
+}
+
+.hero-content h2 {
+    text-align: center;
+    font-family: 'Poppins-Medium';
+    font-stretch: extra-expanded;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: #30B0C7;
+    line-height: 70px;
+    animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+.hero-content h1 {
+    text-align: center;
+    font-family: 'Poppins-Medium';
+    font-stretch: extra-expanded;
+    font-size: 60px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    color: #000;
+    line-height: 70px;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.hero-content p {
+    font-family: 'Poppins-Light';
+    text-align: center;
+    font-size: 15px;
+    color: #1f1f1f;
+    margin-top: 10px;
+    line-height: 1.7;
+    margin: 40px 0px;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+.dropdown-menu{
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.primary-btn {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: all 0.2s ease-in-out;
+    animation: fadeInUp 1.1s ease-in-out forwards;
+}
+
+.primary-btn:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.penyakit {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    padding: 100px 110px;
+    margin-top: -5rem;
+    z-index: 0;
+}
+
+.penyakit-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-penyakit-kanan {
+    width: 80%;
+}
+
+.text-penyakit-kanan h1 {
+    text-align: left;
+    font-family: 'Poppins-Medium';
+    font-stretch: extra-expanded;
+    font-size: 50px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    color: #000;
+    animation: fadeInLeft linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.penyakit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+}
+
+.bakcgound-penyakit {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -100px;
+    z-index: -1;
+}
+
+/* penyakit 1 */
+.penyakit1 {
+    display: flex;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.card1 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.card1 h1, .card2 h1, .card3 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    text-align: justify;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight1 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit1.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 1 */
+
+/* Penyakit 1 Popup */
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content h2{
+    font-family: 'Poppins-Medium';
+    font-size: 50px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight1{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit1.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 1 Popup end*/
+
+/* penyakit 2 */
+.penyakit2 {
+    display: flex;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.card2 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+.card1 h1, .card2 h1, .card3 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight2 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit2.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 2 */
+
+/* Penyakit 2 Popup */
+.popup2 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.popup-content2 {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content2 h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content2 p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight2{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit2.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content2::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content2 {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 2 Popup end*/
+
+/* penyakit 3 */
+.penyakit3 {
+    display: flex;
+    width: 100%;
+}
+
+.card3 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+.card1 h1, .card2 h1, .card3 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight3 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit3.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 3 */
+
+/* Penyakit 3 Popup */
+.popup3 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.popup-content3 {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content3 h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content3 p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight3{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit3.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content3::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content3 {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 3 Popup end*/
+
+/* penyakit 4 */
+.penyakit4 {
+    display: flex;
+    width: 100%;
+}
+
+.card4 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.card1 h1, .card2 h1, .card3 h1, .card4 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p, .card4 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight4 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit4.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 4 */
+
+/* Penyakit 4 Popup */
+.popup4 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.popup-content4 {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content4 h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content4 p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight4{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit4.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content4::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content4 {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 4 Popup end*/
+
+/* penyakit 5 */
+.penyakit5 {
+    display: flex;
+    width: 100%;
+}
+
+.card5 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+.card1 h1, .card2 h1, .card3 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight5 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit5.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 5 */
+
+/* Penyakit 5 Popup */
+.popup5 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.popup-content5 {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content5 h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content5 p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight5{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit5.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content5::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content5 {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 5 Popup end*/
+
+/* penyakit 6 */
+.penyakit6 {
+    display: flex;
+    width: 100%;
+}
+
+.card6 {
+    width: 120%;
+    float: inline-end;
+    padding: 35px 30px;
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    animation: fadeInUp linear;
+    transition: 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+.card1 h1, .card2 h1, .card3 h1, .card4 h1, .card5 h1, .card6 h1 {
+    font-family: 'Poppins-Medium';
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.card1 p, .card2 p, .card3 p, .card4 p, .card5 p, .card6 p {
+    width: 90%;
+    font-family: 'Poppins-Light';
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.primary-btn-penyakit {
+    background-color: #30B0C7;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn-penyakit:hover {
+    background-color: #2480aa;
+    box-shadow: none;
+}
+
+.card_highlight6 {
+    width: 80%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit6.svg');
+    background-position: center;
+    background-size: cover;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    border-radius: 15px 0px 0px 15px;
+
+}
+.card_text {
+    border-radius: 0px 15px 15px 0px;
+
+}
+/* penyakit 6 */
+
+/* Penyakit 6 Popup */
+.popup6 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+}
+
+.popup-content6 {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    max-width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content6 h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content6 p{
+    background: white;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.popup_highlight6{
+    background: white;
+    height: 350px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit6.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content6::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content6 {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 6 Popup end*/
+
+.qna {
+    width: 100vw;
+    padding: 0px 110px;
+    margin-top: -14rem;
+}
+
+.container-5 {
+    width: 100%;
+    margin: 180px auto;
+    background-color: #30B0C7;
+    border: 2px solid #2480aa;
+    border-radius: 15px;
+    padding: 70px 180px;
+}
+.title {
+    font-family: 'Poppins-Medium';
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 35px;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+.tab {
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+.tab input {
+    display: none;
+}
+.tab label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab h3 {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+.content-pertanyaan {
+    font-family: 'Poppins-Light';
+    text-align: justify;
+    display: none;
+    padding-left: 15px;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.tab input:checked + label + .content-pertanyaan {
+    display: block;
+}
+
+.background-olahraga {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin-top: -37rem;
+
+}
+
+.last-title {
+    width: 70%;
+    justify-content: center;
+    font-family: 'Poppins-Medium';
+    font-size: 60px;
+    text-align: center;
+    margin: 11rem auto;
+    animation: fadeInUp linear;
+    transition: 0.3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+
+.footer {
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    padding: 0px 110px;   
+    margin-top: 10rem;
+    background-color: black;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background-color: #30B0C7;
+    margin-top: 10rem;
+}
+
+.container-footer {
+    padding: 32px 110px 32px 110px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-footer {
+    width: 31px;
+    height: 50px;
+    background-image: url(../Images/logo-putih.svg);
+}
+
+.desk-footer {
+    font-family: 'Poppins-Light';
+    max-width: 448px;
+    margin: 0 auto;
+    margin-top: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+.button-container a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: #30B0C7;
+}
+
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+   opacity: 0.8;
+}
+
+/* Mobile Responsive Navbar */
+
+@media (max-width: 400px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .toggle-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        justify-content: center;
+        margin-top: -105%;
+        transition: all 0.5s ease;
+    }
+    .dropdown-menu{
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 5);
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    }
+    .dropdown-menu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown_menu .button2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    .dropdown-menu li a{
+        margin:  0 auto;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .dropdown-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        height: 320px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    
+    .auth-buttons {
+        position: absolute;
+        top: 65%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170%;
+        transition: all 0.5s ease;
+    }
+    
+    .mobile-menu{
+        margin-top: 0;
+    }
+
+    .nav-links li{
+        margin: 30px auto;
+    }
+
+    .hero {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin: 11rem auto -11rem auto ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 85%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        min-width: 0;
+        margin: -90px 0 0 0;
+    }
+    
+    .buttons{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -240px;
+    }
+
+    .primary-btn{
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+    }
+    .secondary-btn{
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .brand-logos{
+        margin-top: 40%;
+    }
+    .hero-image{
+        transform: scale(2.4); /* Perbesar 1.5x */
+        transition: transform 0.3s ease-in-out;
+    }
+    .hero {
+        padding: 0px;
+        margin-top: 10px;
+        display: grid;
+        grid-template-areas: 
+            "image"
+            "text";
+        text-align: center;
+    }
+    
+    .hero-content {
+        grid-area: text;
+    }
+    
+    .hero-image {
+        margin: 0 auto;
+        margin-bottom: -50rem;
+        grid-area: image;
+        width: 80%;
+        max-width: 150px;
+        margin-top: -110px;
+    }
+    
+    .penyakit {
+        width: 100%;
+        position: relative;
+        align-items: center;
+        padding: 100px 110px;
+        background-color: #dcfaffbd;
+        z-index: 0;
+    }
+    
+    .penyakit-text {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .text-penyakit-kanan {
+        width: 65%;
+    }
+    
+    .text-penyakit-kanan h1 {
+        text-align: left;
+        font-family: 'Poppins-Medium';
+        font-stretch: extra-expanded;
+        font-size: 50px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+        color: #000;
+        animation: fadeInLeft linear;
+        transition: 0.3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+    }
+    
+    .penyakit-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    
+    }
+    
+    .bakcgound-penyakit {
+        position: absolute;
+        margin-top: -100px;
+        margin-left: -100px;
+        z-index: -1;
+    }
+    
+    /* penyakit 1 */
+    .penyakit1 {
+        display: flex;
+        width: 100%;
+        margin-top: 6rem;
+    }
+    
+    .card1 {
+        width: 90%;
+        float: inline-end;
+        padding: 35px 30px;
+        background: white;
+        height: 350px;
+        border: 1px solid;
+        border-color: black;
+        animation: fadeInUp linear;
+        transition: 3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 5% cover 35%;
+    }
+    .card1 h1, .card2 h1, .card3 h1 {
+        font-family: 'Poppins-Medium';
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .card1 p, .card2 p, .card3 p {
+        width: 90%;
+        font-family: 'Poppins-Light';
+        font-size: 15px;
+        color: #444;
+        line-height: 1.7;
+    }
+    
+    .primary-btn-penyakit {
+        background-color: #30B0C7;
+        color: white;
+        padding: 12px 40px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 25px;
+        margin-right: 20px;
+        position: relative;
+        box-shadow: 4px 4px 0px black;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .primary-btn-penyakit:hover {
+        background-color: #2480aa;
+        box-shadow: none;
+    }
+    
+    .card_highlight1 {
+        width: 110%;
+        border: 1px solid black;
+        background-image: url('../Images/penyakit1.svg');
+        background-position: center;
+        background-size: cover;
+        animation: fadeInUp linear;
+        transition: 0.3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 5% cover 35%;
+        border-radius: 15px 0px 0px 15px;
+    
+    }
+    .card_text {
+        border-radius: 0px 15px 15px 0px;
+    
+    }
+    /* penyakit 1 */
+    
+    /* Penyakit 1 Popup */
+    .popup {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 40;
+    }
+    
+    .popup-content {
+        background: white;
+        padding: 50px 50px 20px 50px;
+        border-radius: 15px;
+        text-align: center;
+        width: 80%;
+        height: 90%;
+        position: relative;
+        max-height: 80vh; 
+        overflow-y: auto;
+        overflow-x: hidden; 
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .popup-content h2{
+        font-family: 'Poppins-Medium';
+        font-size: 30px;
+        background: white;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .popup-content p{
+        background: white;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .popup_highlight1{
+        background: white;
+        height: 350px;
+        border: 1px solid;
+        border-color: black;
+        width: 100%;
+        border: 1px solid black;
+        background-image: url('../Images/penyakit1.svg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+    }
+    
+    .popup-content::-webkit-scrollbar {
+        width: 0px; 
+        display: none;
+    }
+    
+    .popup-content {
+        scrollbar-width: none;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    /* Penyakit 1 Popup end*/
+
+    /* penyakit 2 */
+    .penyakit2 {
+        display: flex;
+        width: 100%;
+        margin-top: 6rem;
+    }
+    
+    .card2 {
+        width: 90%;
+        float: inline-end;
+        padding: 35px 30px;
+        background: white;
+        height: 350px;
+        border: 1px solid;
+        border-color: black;
+        animation: fadeInUp linear;
+        transition: 3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 5% cover 35%;
+    }
+    .card1 h1, .card2 h1, .card3 h1 {
+        font-family: 'Poppins-Medium';
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    .card1 p, .card2 p, .card3 p {
+        width: 90%;
+        font-family: 'Poppins-Light';
+        font-size: 15px;
+        color: #444;
+        line-height: 1.7;
+    }
+    
+    .primary-btn-penyakit {
+        background-color: #30B0C7;
+        color: white;
+        padding: 12px 40px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 25px;
+        margin-right: 20px;
+        position: relative;
+        box-shadow: 4px 4px 0px black;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .primary-btn-penyakit:hover {
+        background-color: #2480aa;
+        box-shadow: none;
+    }
+    
+    .card_highlight2 {
+        width: 110%;
+        border: 1px solid black;
+        background-image: url('../Images/penyakit1.svg');
+        background-position: center;
+        background-size: cover;
+        animation: fadeInUp linear;
+        transition: 0.3s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 5% cover 35%;
+        border-radius: 15px 0px 0px 15px;
+    
+    }
+    .card_text {
+        border-radius: 0px 15px 15px 0px;
+    
+    }
+    /* penyakit 2 */
+    
+    /* Penyakit 2 Popup */
+    .popup2 {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 40;
+    }
+    
+    .popup-content {
+        background: white;
+        padding: 50px 50px 20px 50px;
+        border-radius: 15px;
+        text-align: center;
+        width: 80%;
+        height: 90%;
+        position: relative;
+        max-height: 80vh; 
+        overflow-y: auto;
+        overflow-x: hidden; 
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .popup-content h2{
+        font-family: 'Poppins-Medium';
+        font-size: 30px;
+        background: white;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .popup-content p{
+        background: white;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .popup_highlight2{
+        background: white;
+        height: 350px;
+        border: 1px solid;
+        border-color: black;
+        width: 100%;
+        border: 1px solid black;
+        background-image: url('../Images/penyakit1.svg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+    }
+    
+    .popup-content::-webkit-scrollbar {
+        width: 0px; 
+        display: none;
+    }
+    
+    .popup-content {
+        scrollbar-width: none;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    /* Penyakit 2 Popup end*/
+
+    
+
+    .footer {
+        margin-top: 1rem;
+    }
+
+    .container-footer {
+        padding: 35px 50px 35px 50px;
+    }
+
+    .footer-bottom {
+        display: grid;
+        text-align: center;
+    }
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 650px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .toggle-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        justify-content: center;
+        margin-top: -105%;
+        transition: all 0.5s ease;
+    }
+    .dropdown-menu{
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 5);
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    }
+    .dropdown-menu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown_menu .button2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    .dropdown-menu li a{
+        margin:  0 auto;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .dropdown-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        height: 320px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    .auth-buttonbuttons {
+        display: none;
+        position: absolute;
+        top: 65%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170%;
+        transition: all 0.5s ease;
+    }
+    .auth-buttons {
+        position: absolute;
+        top: 65%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170%;
+        transition: all 0.5s ease;
+    }
+    
+    .mobile-menu{
+        margin-top: 0;
+    }
+
+    .nav-links li{
+        margin: 30px auto;
+    }
+
+    .hero {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin: 14rem auto -14rem auto ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 55px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        min-width: 400px;
+        margin: -75px 60px 0 60px;
+    }
+    
+    .buttons{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -190px;
+    }
+
+    .primary-btn{
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .secondary-btn{
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .brand-logos{
+        margin-top: 50%;
+    }
+    .hero-image{
+        transform: scale(2.4); /* Perbesar 1.5x */
+        transition: transform 0.3s ease-in-out;
+    }
+    .hero {
+        padding: 0px;
+        margin-top: 10px;
+        display: grid;
+        grid-template-areas: 
+            "image"
+            "text";
+        text-align: center;
+    }
+    
+    .hero-content {
+        grid-area: text;
+    }
+    
+    .hero-image {
+        margin: 0 auto;
+        margin-left: 10rem;
+        margin-bottom: -50rem;
+        grid-area: image;
+        max-width: 180px;
+        margin-top: -110px;
+    }
+    
+    .makanan {
+        padding: 0;
+        margin-top: 9rem;
+    }
+
+    .makanan-text{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text-makanan-kanan {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .text-makanan-kanan h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .text-makanan-kiri{
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .text-container{
+        width: 100%;
+        text-align: center;
+        margin-top: -20px;
+        margin-left: 0;
+    }
+
+    .text-container h2 {
+        margin-bottom: 10px;
+    }
+
+    .text-container h1 {
+        font-size: 32px;
+    }
+
+    .text-container p {
+        width: 100%;
+        font-size: 14px;
+        padding: 0 80px;
+        text-align: left;
+    }
+    
+    .penyakit {
+        margin-top: 8rem;
+        padding: 100px 40px;
+    }
+
+    .penyakit1 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: grid;
+        gap: 0;
+    }
+    .card1 {
+        height: auto;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight1 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .second-p-penyakit {
+        display: none;
+    }
+
+    .primary-btn-penyakit {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .secondary-btn-penyakit {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .penyakit2 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .card2 {
+        height: auto;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight2 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+
+    }
+
+    .penyakit3 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: grid;
+        gap: 0;
+    }
+    .card3 {
+        height: auto;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight3 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Penyakit 1 Popup */
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 60%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content p{
+    background: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.popup_highlight1{
+    background: white;
+    height: 300px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit1.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 1 Popup end*/
+
+    .olahraga {
+        padding: 0;
+        margin-top: 9rem;
+    }
+
+    .background-olahraga {
+        width: 200%;
+        margin-top: 122rem;
+        margin-left: -15rem;
+    }
+
+    .text-olahraga-kanan {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .text-olahraga-kanan h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .text-olahraga-kiri{
+        display: none;
+    }
+
+    .blog-container {
+        display: grid;
+        margin-top: 40px;
+        justify-content: none;
+    }
+
+    .blog-card {
+        text-align: left;
+        padding: 40px;
+        margin-bottom: 5px;
+    }
+
+    .olahraga-img1, .olahraga-img2, .olahraga-img3 {
+        width: auto;
+        height: 350px;
+    }
+
+    .tags {
+        padding: 0;
+    }
+
+    .blog-card h3 {
+        font-size: 28px;
+    }
+
+    .container-footer {
+        padding: 35px 50px 35px 50px;
+    }
+
+    .footer-bottom {
+        display: grid;
+        text-align: center;
+    }
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1000px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .menu-bar{
+        display: block;
+        
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .toggle-btn{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        justify-content: center;
+        margin-top: -105%;
+        transition: all 0.5s ease;
+    }
+    .dropdown-menu{
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 5);
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    }
+    .dropdown-menu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown_menu .button2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    .dropdown-menu li a{
+        margin:  0 auto;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .dropdown-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        height: 320px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    .auth-buttons {
+        position: absolute;
+        top: 65%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170%;
+        transition: all 0.5s ease;
+    }
+    
+    .mobile-menu{
+        margin-top: 0;
+    }
+
+    .nav-links li{
+        margin: 30px auto;
+    }
+
+    .hero {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin: 14rem auto -14rem auto ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 50px;
+        text-align: center;
+        line-height: 55px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        min-width: 400px;
+        margin: -75px 100px 0 100px;
+    }
+    
+    .buttons{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -190px;
+    }
+
+    .primary-btn{
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .secondary-btn{
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .brand-logos{
+        margin-top: 30%;
+    }
+    .hero-image{
+        transform: scale(2.4); /* Perbesar 1.5x */
+        transition: transform 0.3s ease-in-out;
+    }
+    .hero {
+        padding: 0px;
+        margin-top: 10px;
+        display: grid;
+        grid-template-areas: 
+            "image"
+            "text";
+        text-align: center;
+    }
+    
+    .hero-content {
+        grid-area: text;
+    }
+    
+    .hero-image {
+        margin: 0 auto;
+        margin-bottom: -50rem;
+        grid-area: image;
+        max-width:200px;
+        margin-top: -110px;
+    }
+    
+    .makanan {
+        padding: 0;
+        margin-top: 9rem;
+    }
+
+    .makanan-text{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text-makanan-kanan {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .text-makanan-kanan h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .text-makanan-kiri{
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .text-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 70px;
+        margin-top: -20px;
+        margin-left: 0;
+        gap: 60px;
+    }
+
+    .makanan-title-1 {
+        display: grid;
+        align-items: center;
+    }
+    .makanan-title-2 {
+        display: grid;
+    }
+
+    .text-container h2 {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .text-container h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .text-container p {
+        width: 100%;
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    .penyakit {
+        margin-top: 8rem;
+        padding: 100px;
+    }
+
+    .bakcgound-penyakit {
+        margin-left: -150px;
+    }
+
+    .penyakit1 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: grid;
+        gap: 0;
+    }
+    .card1 {
+        height: auto;
+        padding: 45px 40px;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight1 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .primary-btn-penyakit {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .secondary-btn-penyakit {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .penyakit2 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .card2 {
+        height: auto;
+        padding: 45px 40px;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight2 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+
+    }
+
+    .penyakit3 {
+        border: 1px solid black;
+        border-radius: 15px;
+        display: grid;
+        gap: 0;
+    }
+    .card3 {
+        height: auto;
+        padding: 45px 40px;
+        width: 100%;
+        border: none;
+        border-radius: 0 0 15px 15px;
+    }
+    .card_highlight3 {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Penyakit 1 Popup */
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background: white;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    text-align: center;
+    width: 60%;
+    height: 90%;
+    position: relative;
+    max-height: 80vh; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content h2{
+    font-family: 'Poppins-Medium';
+    font-size: 30px;
+    background: white;
+    margin-top: 50px;
+    text-align: center;
+}
+.popup-content p{
+    background: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.popup_highlight1{
+    background: white;
+    height: 300px;
+    border: 1px solid;
+    border-color: black;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('../Images/penyakit1.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 0px; 
+    display: none;
+}
+
+.popup-content {
+    scrollbar-width: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Penyakit 1 Popup end*/
+
+    .olahraga {
+        padding: 0;
+        margin-top: 9rem;
+    }
+
+    .background-olahraga {
+        width: 200%;
+        margin-top: 105rem;
+        margin-left: -15rem;
+    }
+
+    .text-olahraga-kanan {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .text-olahraga-kanan h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .text-olahraga-kiri{
+        display: none;
+    }
+
+    .blog-container {
+        display: grid;
+        margin-top: 40px;
+        justify-content: none;
+    }
+
+    .background-olahraga {
+        width: 130%;
+        margin-left: -9rem;
+        margin-top: 112rem;
+    }
+
+    .blog-card {
+        text-align: left;
+        padding: 40px 100px;
+    }
+
+    .olahraga-img1, .olahraga-img2, .olahraga-img3 {
+        width: auto;
+        height: 350px;
+    }
+
+    .tags {
+        padding: 0;
+    }
+
+    .blog-card h3 {
+        font-size: 28px;
+    }
+
+    .container-footer {
+        padding: 35px 50px 35px 50px;
+    }
+
+    .footer-bottom {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-bottom p {
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .dropdown-menu{
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+    .dropdown-menu li a{
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+    }
+    .auth-buttonbuttons {
+        display: none;
+        position: absolute;
+        top: 65%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        margin-top: -170%;
+        transition: all 0.5s ease;
+    }
+    .dropdown-menu {
+        display: block;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1300px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .hero {
+        margin-top: -4rem;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+    .hero-content p {
+        font-size: 14.5px;
+    }
+
+    .makanan {
+        margin-top: 7rem;
+    }
+
+    .text-makanan-kanan h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+    .text-makanan-kiri p {
+        font-size: 14.5px;
+        margin-top: 40px;
+    }
+
+    .container {
+        margin-top: 110px;
+    }
+
+    .penyakit {
+        margin-top: 7rem;
+    }
+
+    .card1, .card2, .card3 {
+        height: auto;
+    }
+
+    .card1 h1, .card2 h1, .card3 h1 {
+        font-size: 31px;
+    }
+    .card1 p, .card2 p, .card3 p {
+        font-size: 14.5px;
+    }
+    .second-p-penyakit {
+        display: none;
+    }
+
+    .primary-btn-penyakit {
+        width: 100%;
+        font-size: 14.5px;
+    }
+    .secondary-btn-penyakit {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 14.5px;
+    }
+
+    .olahraga {
+        margin-top: 7rem;
+    }
+
+    .background-olahraga {
+        margin-top: 18rem;
+    }
+
+    .text-olahraga-kanan h1 {
+        font-size: 45px;
+    }
+    .text-olahraga-kiri p {
+        font-size: 14.5px;
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutScale {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+        visibility: visible;
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-70px);
+        visibility: visible;
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+        visibility: visible;
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+  }

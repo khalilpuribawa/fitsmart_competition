@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitSmart - Edukasi Kesehatan</title>
+    <link rel="stylesheet" href="../Style/penyakit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../Images/logo-putih.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars" style="font-size: 23px;"></i>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html">
+                <button type="button" class="btn-masuk">Masuk</button>
+            </a>
+            <a href="register.html">
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a>
+        </div>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="konsumsi.html">Konsumsi</a></li>
+            <li><a href="aktifitas.html">Aktifitas</a></li>
+            <li><a href="penyakit.html">Penyakit</a></li>
+            <li class="button2"><a href="#">
+                <button type="button" class="btn-masuk">Masuk</button>
+                <button type="button" class="btn-daftar">Daftar</button>
+            </a></li>
+        </ul>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const toggleBtnIcon = document.querySelector('.toggle-btn i'); // Ikon di dalamnya
+            const dropDownMenu = document.querySelector('.dropdown-menu');
+
+            toggleBtn.addEventListener("click", function () {
+                // Toggle class "open" untuk menampilkan atau menyembunyikan dropdown
+                dropDownMenu.classList.toggle('open');
+
+                // Deklarasikan isOpen dalam fungsi ini agar tidak undefined
+                let isOpen = dropDownMenu.classList.contains('open');
+
+                // Ganti ikon FontAwesome
+                toggleBtnIcon.className = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars';
+            });
+        </script>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="tag-text">MENJAGA KESEHATAN UNTUK HIDUP LEBIH BAIK</h2>
+            <p style="position: absolute; font-size: 55px; margin-top: -5rem; margin-left: 50rem;" class="emote">🤒</p>
+            <p style="position: absolute; font-size: 55px; margin-top: 12rem;" class="emote">🤕</p>
+            <h1 class="judul-text1">Waspada Penyakit</h1>
+                <p>Silakan berikan deskripsi baru yang ingin Anda gunakan, atau jika ingin saya membantu merangkai kalimat yang lebih menarik, beri tahu saya konsep atau kata kunci yang ingin dimasukkan! 😊</p>            
+            <div class="buttons">
+                <a href="#penyakit">
+                <button class="primary-btn">Pelajari Lebih →</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+        </div>
+    </section>
+
+    <button class="floating-button" onclick="toggleAI()">AI</button>
+    <div class="chatBot" id="aiBox">
+        <header>AI FitSmart</header>
+        <ul class="chatbox">
+        </ul>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder=""></textarea>
+            <button class="button-ai" id="sendBTN">Kirim</button>
+        </div>
+    </div>
+
+    <section>
+        <div class="penyakit" id="penyakit">
+            <div class="penyakit-grid">
+                <div class="penyakit1">
+                    <div class="card1 card_highlight1"></div>
+                    <div class="card1 card_text">
+                        <h1>Diabetes Mellitus: <br> Penyakit Metabolik</h1>
+                        <p style="margin-bottom: 15px;">Diabetes Mellitus adalah gangguan metabolik kronis yang ditandai dengan kadar gula darah yang tinggi akibat...</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <div class="popup_highlight1"></div>
+                        <h2>Diabetes Mellitus</h2>
+                        <p>Diabetes Mellitus adalah penyakit metabolik kronis yang menyebabkan kadar gula darah tinggi akibat gangguan produksi atau respons tubuh terhadap insulin. Insulin adalah hormon yang diproduksi oleh pankreas dan berfungsi untuk membantu sel-sel tubuh menyerap glukosa dari darah dan menggunakannya sebagai sumber energi. <br><br>
+
+                            Ketika seseorang mengalami diabetes, tubuhnya tidak dapat menggunakan insulin secara efektif atau tidak memproduksi cukup insulin, yang menyebabkan akumulasi glukosa dalam darah (hiperglikemia). Jika tidak ditangani dengan baik, kondisi ini dapat menyebabkan berbagai komplikasi serius, baik jangka pendek maupun jangka panjang. <br><br>
+                            
+                            Jenis-Jenis Diabetes Mellitus<br><br>
+                            Diabetes Mellitus terbagi menjadi beberapa jenis utama, yaitu:<br><br>
+                            
+                            Diabetes Tipe 1<br><br>
+                            
+                            Merupakan penyakit autoimun di mana sistem kekebalan tubuh menyerang dan menghancurkan sel beta pankreas yang bertanggung jawab dalam produksi insulin.<br><br>
+                            Biasanya didiagnosis pada usia anak-anak atau remaja, tetapi juga bisa terjadi pada orang dewasa.<br><br>
+                            Penderita diabetes tipe 1 memerlukan terapi insulin seumur hidup untuk mengontrol kadar gula darahnya.<br><br>
+                            Diabetes Tipe 2<br><br>
+                            
+                            Terjadi ketika tubuh masih bisa memproduksi insulin, tetapi tidak menggunakannya dengan baik (resistensi insulin).<br><br>
+                            Sering dikaitkan dengan gaya hidup tidak sehat, seperti pola makan tinggi gula dan lemak, obesitas, serta kurangnya aktivitas fisik.<br><br>
+                            Umumnya terjadi pada orang dewasa, tetapi kini semakin banyak ditemukan pada remaja dan anak-anak akibat pola hidup modern.<br><br>
+                            Pengelolaannya meliputi perubahan gaya hidup, obat oral, dan dalam beberapa kasus, terapi insulin.<br><br>
+                            Diabetes Gestasional<br><br>
+                            
+                            Terjadi pada wanita hamil yang sebelumnya tidak memiliki riwayat diabetes.<br><br>
+                            Disebabkan oleh perubahan hormon selama kehamilan yang mempengaruhi cara tubuh menggunakan insulin.<br><br>
+                            Biasanya sembuh setelah melahirkan, tetapi dapat meningkatkan risiko terkena diabetes tipe 2 di masa depan.<br><br>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="penyakit2">
+                    <div class="card2 card_highlight2"></div>
+                    <div class="card2 card_text">
+                        <h1>Kolesterol: <br> Risiko Penyakit Jantung</h1>
+                        <p style="margin-bottom: 15px;">Kolesterol tinggi adalah kondisi di mana kadar kolesterol dalam darah melebihi batas...</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup2()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup2" class="popup2" style="display: none;">
+                    <div class="popup-content2">
+                        <span class="close-btn" onclick="closePopup2()">&times;</span>
+                        <div class="popup_highlight2"></div>
+                        <h2>Kolesterol Tinggi</h2>
+                        <p>Kolesterol tinggi adalah kondisi di mana kadar kolesterol dalam darah melebihi batas normal. Kolesterol sendiri adalah zat lemak yang dibutuhkan tubuh untuk membangun sel dan memproduksi hormon. Namun, kadar kolesterol yang berlebihan dapat meningkatkan risiko penyakit jantung dan stroke.
+
+                            <br><br>
+                            
+                            Jenis-Jenis Kolesterol
+                            Kolesterol dalam darah terdiri dari beberapa jenis utama:
+                            
+                            ✅ Low-Density Lipoprotein (LDL) – "Kolesterol Jahat"
+                            LDL dapat menumpuk di dinding arteri dan membentuk plak, yang menyebabkan penyempitan pembuluh darah dan meningkatkan risiko penyakit jantung.
+                            
+                            ✅ High-Density Lipoprotein (HDL) – "Kolesterol Baik"
+                            HDL membantu mengangkut kolesterol dari darah kembali ke hati untuk dibuang, sehingga dapat melindungi tubuh dari penyakit kardiovaskular.
+                            
+                            ✅ Trigliserida
+                            Merupakan jenis lemak dalam darah yang meningkat akibat konsumsi kalori berlebih. Kadar trigliserida yang tinggi dikaitkan dengan peningkatan risiko penyakit jantung.
+                            
+                            <br><br>
+                            
+                            Penyebab Kolesterol Tinggi
+                            Beberapa faktor yang dapat menyebabkan peningkatan kadar kolesterol dalam darah meliputi:
+                            
+                            🔴 Pola Makan Tidak Sehat – Konsumsi makanan tinggi lemak jenuh dan trans, seperti gorengan, makanan cepat saji, dan produk olahan susu tinggi lemak.
+                            
+                            🔴 Kurangnya Aktivitas Fisik – Gaya hidup sedentari menyebabkan penurunan kadar HDL dan peningkatan LDL.
+                            
+                            🔴 Obesitas – Berat badan berlebih dapat meningkatkan kadar LDL dan trigliserida serta menurunkan HDL.
+                            
+                            🔴 Merokok – Rokok dapat menurunkan kadar HDL dan mempercepat pembentukan plak di arteri.
+                            
+                            🔴 Faktor Genetik – Beberapa orang memiliki kondisi yang disebut hiperkolesterolemia familial, yang menyebabkan kadar kolesterol tinggi sejak lahir.
+                            
+                            🔴 Kondisi Medis – Penyakit seperti diabetes, hipotiroidisme, dan sindrom metabolik dapat meningkatkan kadar kolesterol dalam darah.
+                            
+                            <br><br>
+                            
+                            Gejala Kolesterol Tinggi
+                            Kolesterol tinggi sering kali tidak menimbulkan gejala hingga menyebabkan komplikasi serius. Namun, beberapa tanda yang mungkin muncul meliputi:
+                            
+                            ✅ Xanthomas – Timbunan lemak berwarna kuning di kulit, terutama di sekitar mata, siku, atau lutut.
+                            
+                            ✅ Nyeri Dada (Angina) – Akibat penyumbatan arteri yang menghambat aliran darah ke jantung.
+                            
+                            ✅ Kesemutan atau Mati Rasa – Bisa terjadi jika aliran darah ke otak atau ekstremitas terganggu.
+                            
+                            ✅ Tekanan Darah Tinggi – Kolesterol yang menumpuk di arteri dapat menyebabkan tekanan darah meningkat.
+                            
+                            ✅ Serangan Jantung atau Stroke – Jika plak di arteri pecah dan membentuk gumpalan darah yang menyumbat aliran darah.
+                            
+                            <br><br>
+                            
+                            Dampak dan Komplikasi Kolesterol Tinggi
+                            Jika tidak dikontrol, kolesterol tinggi dapat menyebabkan berbagai komplikasi serius, seperti:
+                            
+                            🔴 Aterosklerosis – Penyempitan dan pengerasan arteri akibat penumpukan plak kolesterol.
+                            
+                            🔴 Penyakit Jantung Koroner – Penyempitan pembuluh darah jantung yang dapat menyebabkan nyeri dada atau serangan jantung.
+                            
+                            🔴 Stroke – Terjadi ketika aliran darah ke otak terhambat akibat penyumbatan atau pecahnya pembuluh darah.
+                            
+                            🔴 Penyakit Arteri Perifer (PAD) – Penyempitan pembuluh darah di kaki yang menyebabkan nyeri saat berjalan dan meningkatkan risiko amputasi.
+                            
+                            🔴 Hipertensi (Tekanan Darah Tinggi) – Kolesterol tinggi dapat membuat jantung bekerja lebih keras untuk memompa darah.
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="penyakit3">
+                    <div class="card3 card_highlight3"></div>
+                    <div class="card3 card_text">
+                        <h1>Demam Berdarah  <br>Dengue (DBD)</h1>
+                        <p style="margin-bottom: 15px;">Demam Berdarah Dengue (DBD) adalah penyakit yang disebabkan oleh virus dengue yang ditularkan melalui...</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup3()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup3" class="popup" style="display: none;">
+                    <div class="popup-content3">
+                        <span class="close-btn" onclick="closePopup3()">&times;</span>
+                        <div class="popup_highlight3"></div>
+                        <h2>Demam Berdarah Dengue</h2>
+                        <p>Demam Berdarah Dengue (DBD) adalah penyakit yang disebabkan oleh virus dengue yang ditularkan melalui gigitan nyamuk Aedes aegypti dan Aedes albopictus. Penyakit ini sering terjadi di daerah tropis dan subtropis, termasuk Indonesia.
+
+                            <br><br>
+                            
+                            Penyebab dan Penularan
+                            ✅ Disebabkan oleh virus dengue yang memiliki 4 serotipe (DENV-1, DENV-2, DENV-3, DENV-4).
+                            ✅ Ditularkan melalui gigitan nyamuk Aedes yang terinfeksi.
+                            ✅ Nyamuk berkembang biak di tempat-tempat dengan air tergenang, seperti pot bunga, ban bekas, dan genangan air di sekitar rumah.
+                            
+                            <br><br>
+                            
+                            Gejala DBD
+                            ✅ Demam tinggi mendadak (39–41°C) selama 2-7 hari.
+                            ✅ Sakit kepala parah dan nyeri di belakang mata.
+                            ✅ Nyeri sendi, otot, dan tulang.
+                            ✅ Mual, muntah, dan kehilangan nafsu makan.
+                            ✅ Bintik-bintik merah pada kulit akibat kebocoran pembuluh darah.
+                            ✅ Pendarahan ringan seperti mimisan atau gusi berdarah.
+                            
+                            <br><br>
+                            
+                            Pencegahan dan Pengobatan
+                            ✅ Lakukan 3M (Menguras, Menutup, dan Mendaur ulang) untuk mencegah perkembangbiakan nyamuk.
+                            ✅ Gunakan kelambu dan obat nyamuk untuk menghindari gigitan nyamuk.
+                            ✅ Jika mengalami gejala DBD, segera periksakan diri ke dokter untuk mendapatkan penanganan yang tepat.
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="penyakit4">
+                    <div class="card4 card_highlight4"></div>
+                    <div class="card4 card_text">
+                        <h1>Gastroesophageal <br> Reflux Disease (GERD)</h1>
+                        <p style="margin-bottom: 15px;">Diabetes Mellitus adalah gangguan metabolik kronis yang ditandai dengan kadar gula darah yang tinggi akibat...</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup4()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup4" class="popup4" style="display: none;">
+                    <div class="popup-content4">
+                        <span class="close-btn" onclick="closePopup4()">&times;</span>
+                        <div class="popup_highlight4"></div>
+                        <h2>Gastroesophageal Reflux Disease</h2>
+                        <p>GERD adalah gangguan pencernaan kronis di mana asam lambung naik ke kerongkongan (refluks asam) dan menyebabkan iritasi.
+
+                            <br><br>
+                            
+                            Penyebab GERD
+                            ✅ Kelemahan otot sfingter esofagus bawah (LES).
+                            ✅ Pola makan tidak sehat, seperti konsumsi makanan berlemak, pedas, dan asam.
+                            ✅ Kebiasaan makan sebelum tidur atau langsung berbaring setelah makan.
+                            ✅ Obesitas dan kehamilan yang meningkatkan tekanan pada lambung.
+                            
+                            <br><br>
+                            
+                            Gejala GERD
+                            ✅ Sensasi terbakar di dada (heartburn).
+                            ✅ Rasa asam atau pahit di mulut.
+                            ✅ Kesulitan menelan dan rasa tersangkut di tenggorokan.
+                            ✅ Batuk kronis dan suara serak akibat iritasi asam lambung.
+                            
+                            <br><br>
+                            
+                            Cara Mencegah dan Mengobati GERD
+                            ✅ Hindari makanan pemicu seperti makanan berlemak dan kafein.
+                            ✅ Makan dalam porsi kecil dan hindari makan sebelum tidur.
+                            ✅ Jaga berat badan ideal dan tidur dengan posisi kepala lebih tinggi.
+                            ✅ Konsumsi obat antasida atau inhibitor pompa proton sesuai anjuran dokter.
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="penyakit5">
+                    <div class="card5 card_highlight5"></div>
+                    <div class="card5 card_text">
+                        <h1>Obesitas: Kurang  <br> Aktivitas Fisik</h1>
+                        <p style="margin-bottom: 15px;">Obesitas adalah kondisi kelebihan lemak tubuh yang dapat meningkatkan risiko berbagai penyakit kronis...</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup5penyakit()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup5penyakit" class="popup" style="display: none;">
+                    <div class="popup-content5">
+                        <span class="close-btn" onclick="closePopup5penyakit()">&times;</span>
+                        <div class="popup_highlight5"></div>
+                        <h2>Obesitas</h2>
+                        <p>Obesitas adalah kondisi kelebihan lemak tubuh yang dapat meningkatkan risiko berbagai penyakit kronis.
+
+                            <br><br>
+                            
+                            Penyebab Obesitas
+                            ✅ Pola makan tinggi kalori dan kurang aktivitas fisik.
+                            ✅ Faktor genetik dan hormon.
+                            ✅ Stres dan kurang tidur yang memengaruhi metabolisme.
+                            
+                            <br><br>
+                            
+                            Dampak Obesitas
+                            ✅ Meningkatkan risiko diabetes tipe 2 dan penyakit jantung.
+                            ✅ Memicu tekanan darah tinggi dan stroke.
+                            ✅ Gangguan pernapasan seperti sleep apnea.
+                            
+                            <br><br>
+                            
+                            Cara Mencegah dan Mengatasi Obesitas
+                            ✅ Mengonsumsi makanan sehat dan seimbang.
+                            ✅ Berolahraga secara teratur minimal 30 menit per hari.
+                            ✅ Mengelola stres dengan baik dan tidur yang cukup.
+                            
+                            <br><br>
+                            
+                            Dengan menjaga pola hidup sehat, berbagai penyakit ini dapat dicegah dan dikendalikan dengan lebih baik. 🚀
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="penyakit6">
+                    <div class="card6 card_highlight6"></div>
+                    <div class="card6 card_text">
+                        <h1> (ISPA) Infeksi Saluran<br> Pernapasan Akut </h1>
+                        <p style="margin-bottom: 15px;">ISPA adalah infeksi yang menyerang saluran pernapasan, termasuk hidung, tenggorokan, dan paru-paru....</p>
+                        <button class="primary-btn-penyakit" onclick="openPopup6penyakit()">Pelajari Lebih →</button>
+                    </div>
+                </div>
+
+                <div id="popup6penyakit" class="popup6" style="display: none;">
+                    <div class="popup-content6">
+                        <span class="close-btn" onclick="closePopup6penyakit()">&times;</span>
+                        <div class="popup_highlight6"></div>
+                        <h2>ISPA</h2>
+                        <p>ISPA adalah infeksi yang menyerang saluran pernapasan, termasuk hidung, tenggorokan, dan paru-paru.
+
+                            <br><br>
+                            
+                            Penyebab ISPA
+                            ✅ Virus seperti influenza dan rhinovirus.
+                            ✅ Infeksi bakteri seperti pneumonia dan pertusis.
+                            ✅ Paparan polusi udara dan asap rokok.
+                            
+                            <br><br>
+                            
+                            Gejala ISPA
+                            ✅ Batuk dan pilek.
+                            ✅ Demam dan sakit tenggorokan.
+                            ✅ Sesak napas jika infeksi semakin parah.
+                            
+                            <br><br>
+                            
+                            Pencegahan ISPA
+                            ✅ Rajin mencuci tangan dan menjaga kebersihan lingkungan.
+                            ✅ Menggunakan masker saat berada di tempat ramai.
+                            ✅ Meningkatkan daya tahan tubuh dengan makanan bergizi.
+                            
+                            <br><br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="qna">
+        <div class="container-5">
+            <div class="title">Frequently Asked Questions</div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-1">
+                <label for="acc-1">
+                    <h3>Apa Manfaat Olahraga bagi Kesehatan Tubuh?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Olahraga membantu meningkatkan kesehatan jantung, memperkuat otot dan tulang, meningkatkan daya tahan tubuh, serta mengurangi risiko penyakit kronis seperti diabetes dan hipertensi.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-2">
+                <label for="acc-2">
+                    <h3>Berapa Lama Waktu yang Ideal untuk Berolahraga Setiap Hari?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Idealnya, kita perlu berolahraga setidaknya 30 menit per hari atau 150 menit per minggu dengan intensitas sedang seperti berjalan cepat, berenang, atau bersepeda.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-3">
+                <label for="acc-3">
+                    <h3>Apa Saja Jenis Olahraga yang Cocok untuk Pemula</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Pemula bisa memulai dengan jalan kaki, jogging ringan, yoga, bersepeda, atau senam aerobik untuk meningkatkan kebugaran tubuh secara bertahap tanpa risiko cedera tinggi.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc-4">
+                <label for="acc-4">
+                    <h3>Apakah Olahraga Malam Hari Baik untuk Kesehatan?</h3>
+                </label>
+                <div class="content-pertanyaan">
+                    <p>Olahraga malam tetap baik jika dilakukan 1-2 jam sebelum tidur dengan intensitas ringan hingga sedang, seperti yoga atau jalan santai, agar tidak mengganggu kualitas tidur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img class="background-olahraga" src="../Images/background-olahraga.svg" alt="">
+
+    <h1 class="last-title">Mulai <span style="color: #30B0C7; font-family: 'Poppins-Medium';">Hidup Sehat</span> Dari Sekarang Demi Masa Depan</h1>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-top">
+                <div class="logo-footer"></div>
+                <p class="desk-footer">Menjaga Kesehatan Indonesia</p>
+
+                <div class="button-container">
+                    <a href="login.html">
+                    <button type="button" class="button">Masuk</button>
+                    </a>
+                    <a href="register.html">
+                    <button type="button" class="button">Daftar</button>
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© FitSmart 2025. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="konsumsi.html">Konsumsi</a>
+                    <a href="penyakit.html">Penyakit</a>
+                    <a href="aktifitas.html">Aktifitas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="../script.js"></script>
+
+</body>
+
+
+</html>
